@@ -8,7 +8,7 @@ redirect_from:
 parent: Getting Started
 ---
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # API Limits
 The Laserfiche API imposes certain limitations in order to sustain the quality and integrity of our cloud services for all customers. In the event of extraordinary resource contention, Laserfiche may impose temporary limits in addition to the **Laserfiche API limits** listed in the [Service Limits page](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Service-Limits.htm) in order to prevent service outages affecting all customers.

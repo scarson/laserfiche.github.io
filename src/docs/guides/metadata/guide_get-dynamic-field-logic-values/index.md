@@ -9,7 +9,7 @@ parent: Repository Metadata
 grand_parent: Guides
 ---
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # Get Dynamic Field Logic Values
 Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Dynamic-Fields.htm) in Laserfiche in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a parent field determines what value are available in the "child" fields. Dynamic fields can contain multiple levels (for instance, only displaying the available model numbers for a particular model once the Model field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of manufacturer and model).

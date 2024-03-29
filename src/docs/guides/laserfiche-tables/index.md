@@ -1,4 +1,11 @@
+---
+layout: default
+nav_order: 3
+title: Tables
+parent: Guides
+---
+
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 ## TODO

@@ -8,7 +8,7 @@ redirect_from:
     - api.html
 ---
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche REST API
 
