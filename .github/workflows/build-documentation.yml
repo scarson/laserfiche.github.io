@@ -1,5 +1,5 @@
 # Copyright (c) Laserfiche.
-# Licensed under the MIT License. See LICENSE in the project root for license information.
+# See LICENSE and LICENSE-CODE in the project root for license information.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Build and Deploy Documentation
@@ -35,6 +35,12 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
