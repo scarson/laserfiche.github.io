@@ -3,11 +3,12 @@ layout: default
 title: Authenticate from the Swagger UI Sandbox
 nav_order: 1
 redirect_from:
-    - guides/guide_authenticating-to-the-swagger-playground.html
-    - guide_authenticating-to-the-swagger-playground.html
+  - guides/guide_authenticating-to-the-swagger-playground.html
+  - guide_authenticating-to-the-swagger-playground.html
 parent: Authentication
 grand_parent: API
 ---
+
 <!--Copyright (c) Laserfiche.
 See LICENSE and LICENSE-CODE in the project root for license information.-->
 
@@ -15,47 +16,43 @@ See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting [Laserfiche REST Swagger Playground](../../playground/).
 
-
 For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](../../server/#authenticating-with-the-self-hosted-laserfiche-api).
 
 ## Using an OAuth Access Token on Swagger UI
 
 {: .note }
-**Note:** The following guide follows the OAuth model and is used by Version 1 and later of the Cloud APIs. In the sandbox, use the **Select a definition** option and select v1 or a later version to use the OAuth Access Token.
+**Note:** The following guide follows the OAuth model and is used by Version 1 and later of the Cloud APIs. In the sandbox, use the **Select a definition** option and select v1 or a later version to use the OAuth Access Token. Choose the section below based on what type of app you would like to authenticate (Service App, Wep App, or Single-Page App).
 
 ### Authorize your OAuth Service App on Swagger UI
 
-{: .note }
-**Note:** These steps can be skipped if your app is a Web App or Single-Page App.
-
-
-1. Follow the guide on [Creating an OAuth Service App](../guide_oauth-service/). After going through the guide, you will have registered your service app on the Developer Console and gone through the OAuth Client Credentials Grant Flow to get an **OAuth Access Token**.
+1. Follow the guide on [Creating an OAuth Service App](../guide_oauth-service/). After going through the guide, you will have registered your service app on the Developer Console and gone through the steps to obtain either an **OAuth Access Token** or a **username and password**.
 1. On the Swagger UI Sandbox, scroll to the top of the page, (switch to the **v1** or later definition for Repository API), and click **Authorize** to display the following dialog box. ![](./assets/images/api-swagger-04.png)
-1. In the dialog box, find the **Authorization (http, Bearer)** option. Within **Value**, enter the OAuth Access Token value from step 1.
+1. In the dialog box
+   - If you have an **OAuth Access Token**, find the **Authorization (http, Bearer)** option. Within **Value**, enter the OAuth Access Token value from step 1.
+   - If you have a **username and password**, find the **Basic Authentication (http)** option. Enter the username and password values you received in step 1.
 1. Click **Authorize**.
-1. This will automatically add the Authorization header to your requests with the bearer token. Now you're ready to make any Laserfiche API call in the playground.
+1. This will automatically add the Authorization header to your requests. Now you're ready to make any Laserfiche API call in the playground.
 
 {: .note }
-**Note:** The sandbox will automatically append the Bearer prefix to your OAuth Access Token. When creating your integration, please make sure the Authorization header value has *Bearer* before your OAuth Access Token, e.g., "Authorization: Bearer {*OAuth Access Token*}"
+**Note:** The sandbox will automatically add the Authorization header to any request from the playground. When creating your integration, please make sure when using an **OAuth Access Token** the Authorization header value has _Bearer_ before your OAuth Access Token, e.g., "Authorization: Bearer {_OAuth Access Token_}" and when using a Basic authentication **username and password** the Authorization header value follows the Basic authentication standard, e.g., "Authorization: Basic {_username:password (base64 encoded)_}"
 
 ### Authorize your OAuth Web App or Single-Page App on Swagger UI
 
-{: .note }
-**Note:** These steps can be skipped if your app is a Service App.
-
 1. Register your app on the Developer Console. For more information, follow the first section in the guide on [Creating an OAuth Web App](../guide_oauth-webapp) or [Creating an OAuth Single-Page App](../guide_oauth-spa) depending on your app type.
-1. On the App Configuration page, add the following URI to the list of redirect URIs. The redirect URI depends on where your Laserfiche Cloud resides. 
+1. On the App Configuration page, add the following URI to the list of redirect URIs. The redirect URI depends on where your Laserfiche Cloud resides.
 
 1. **Repository API**
-  - For the United States Data Center: https://api.laserfiche.com/repository/swagger/oauth2-redirect.html
-  - For the Canadian Data Center: https://api.laserfiche.ca/repository/swagger/oauth2-redirect.html
-  - For the European Data Center: https://api.eu.laserfiche.com/repository/swagger/oauth2-redirect.html
+
+- For the United States Data Center: https://api.laserfiche.com/repository/swagger/oauth2-redirect.html
+- For the Canadian Data Center: https://api.laserfiche.ca/repository/swagger/oauth2-redirect.html
+- For the European Data Center: https://api.eu.laserfiche.com/repository/swagger/oauth2-redirect.html
 
 1. **(Preview) Table API**
-  - For the United States Data Center: https://api.laserfiche.com/odata4/swagger/oauth2-redirect.html
-  - For the Canadian Data Center: https://api.laserfiche.ca/odata4/swagger/oauth2-redirect.html
-  - For the European Data Center: https://api.eu.laserfiche.com/odata4/swagger/oauth2-redirect.html
-        ![](./assets/images/api-swagger-oauth-web-app-01.png)
+
+- For the United States Data Center: https://api.laserfiche.com/odata4/swagger/oauth2-redirect.html
+- For the Canadian Data Center: https://api.laserfiche.ca/odata4/swagger/oauth2-redirect.html
+- For the European Data Center: https://api.eu.laserfiche.com/odata4/swagger/oauth2-redirect.html
+  ![](./assets/images/api-swagger-oauth-web-app-01.png)
 
 1. On the Swagger UI Sandbox, scroll to the top of the page, (switch to the **v1** or later definition for Repository API), and click **Authorize** to display the following dialog box. ![](./assets/images/api-swagger-oauth-web-app-02.png)
 1. In the dialog box, find the **OAuth2 Authorization Code Flow** Authorization option. Within **client_id**, enter the Client ID found on the Developer Console App Configuration page. For Web Apps, also enter the Client Secret within the **client_secret** section of the dialog box. For Single-Page Apps, the client secret should be blank.
@@ -65,4 +62,4 @@ For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](..
 1. The new tab should close automatically. Going back to the Swagger UI page, you should see you are **Authorized** now. Requests to the Laserfiche API on the Swagger UI page will now automatically add the Authorization header with the bearer token. Now you're ready to make any Laserfiche API call in the playground.
 
 {: .note }
-**Note:** The sandbox will automatically append the Bearer prefix to your OAuth Access Token. When creating your integration, please make sure the Authorization header value has *Bearer* before your OAuth Access Token, e.g., "Authorization: Bearer {*OAuth Access Token*}"
+**Note:** The sandbox will automatically append the Bearer prefix to your OAuth Access Token. When creating your integration, please make sure the Authorization header value has _Bearer_ before your OAuth Access Token, e.g., "Authorization: Bearer {_OAuth Access Token_}"
