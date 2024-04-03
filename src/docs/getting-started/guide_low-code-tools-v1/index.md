@@ -24,6 +24,7 @@ HTTP Requests to the Laserfiche API will require an Access Token for authenticat
 **Note:** The following section only applies to Laserfiche Cloud. For Self-Hosted, see the [Self-Hosted Laserfiche](#self-hosted-laserfiche) section.
 
 The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/authentication/guide_authenticate-to-the-laserfiche-api/). A low-code solution must first be registered in the Developer Console as an OAuth Service App.
+
 1. Follow this guide to [register an OAuth service app in the Developer Console with a long-lasting authorization key](../../api/authentication/guide_oauth-service/).
 1. Create an HTTP action in your low-code solution to obtain an Access Token given a long-lasting `{authorizationKey}` obtained during the application registration.
     - ```xml
@@ -45,7 +46,9 @@ The Laserfiche Cloud APIs follows the [OAuth 2.0 authorization model](../../api/
     "scope": "repository.Read repository.Write"
     }
     ```
-    - {: .note } **Note:** Authorization Keys and Access Tokens should be securely stored.
+        
+        {: .note } 
+        **Note:** Authorization Keys and Access Tokens should be securely stored.
 1. The Access Token obtained from the **Get Laserfiche Access Token** action can then be used by downstream HTTP actions that interact with the Laserfiche APIs. For example, [import a document using a low-code tool](#use-case-importing-a-document-from-microsoft-onedrive-into-laserfiche-using-microsoft-power-automate).
           
 ### Self-Hosted Laserfiche
@@ -75,7 +78,8 @@ HTTP 200 OK
 }
 ```
 
-{: .note }**Note:** Credentials and Access Tokens should be securely stored.
+{: .note }
+**Note:** Credentials and Access Tokens should be securely stored.
 
 ## Use Case: Importing a Document from Microsoft OneDrive into Laserfiche using Microsoft Power Automate
 
@@ -96,75 +100,77 @@ See the [importing a document guide](../../guides/documents-and-folders/guide_im
     - The Access Token from the **Get Laserfiche Access Token** [action](#authentication) must be added to the Authorization header. Format the Authorization header value as follows `Bearer @{body('Get_Laserfiche_Access_Token')['access_token']}`.
     - The request **body** is a multipart/form-data with two parts.
         - The first part contains the file content from the **Get file content using path** action.
-        - {: .note }**Note:** The `Content-Type` header or the extension in the filename in the `Content-Disposition` header is used to determine the file type for the document imported to Laserfiche.
+            
+        {: .note }
+        **Note:** The `Content-Type` header or the extension in the filename in the `Content-Disposition` header is used to determine the file type for the document imported to Laserfiche.
         - As an example, the second part assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository.
 1. Copy and paste the following request body.
     - ```xml
-    {
-    "$content-type": "multipart/form-data",
-    "$multipart": [
         {
-        "headers": {
-            "Content-Disposition": "form-data; name=\"electronicDocument\"; filename=@{outputs('Get_file_metadata')?['body/Name']}",
-            "Content-Transfer-Encoding": "binary"
-        },
-        "body": @{body('Get_file_content_using_path')}
-        },
-        {
-        "headers": {
-            "Content-Disposition": "form-data; name=\"request\"",
-            "Content-Transfer-Encoding": "binary"
-        },
-        "body": {
-            "template": "Email",
-            "metadata": {
-            "fields": {
-                "Sender": {
-                "values": [
-                    {
-                    "value": "sender@laserfiche.com",
-                    "position": 1
+        "$content-type": "multipart/form-data",
+        "$multipart": [
+            {
+            "headers": {
+                "Content-Disposition": "form-data; name=\"electronicDocument\"; filename=@{outputs('Get_file_metadata')?['body/Name']}",
+                "Content-Transfer-Encoding": "binary"
+            },
+            "body": @{body('Get_file_content_using_path')}
+            },
+            {
+            "headers": {
+                "Content-Disposition": "form-data; name=\"request\"",
+                "Content-Transfer-Encoding": "binary"
+            },
+            "body": {
+                "template": "Email",
+                "metadata": {
+                "fields": {
+                    "Sender": {
+                    "values": [
+                        {
+                        "value": "sender@laserfiche.com",
+                        "position": 1
+                        }
+                    ]
+                    },
+                    "Recipients": {
+                    "values": [
+                        {
+                        "value": "recipient@laserfiche.com",
+                        "position": 1
+                        }
+                    ]
                     }
-                ]
-                },
-                "Recipients": {
-                "values": [
-                    {
-                    "value": "recipient@laserfiche.com",
-                    "position": 1
-                    }
-                ]
+                }
                 }
             }
             }
+        ]
         }
-        }
-    ]
-    }
-    ```
+        ```
 1. A successful response will contain the entry ID of the imported document and an API link to get more document properties.
     - ```xml
-    HTTP 201 Created
-    {
-    "operations": {
-        "entryCreate": {
-        "entryId": {documentId},
-        "exceptions": []
+        HTTP 201 Created
+        {
+        "operations": {
+            "entryCreate": {
+            "entryId": {documentId},
+            "exceptions": []
+            },
+            "setEdoc": {
+            "exceptions": []
+            },
+            "setTemplate": {
+            "template": "Email",
+            "exceptions": []
+            },
+            "setFields": {
+            "fieldCount": 2,
+            "exceptions": []
+            }
         },
-        "setEdoc": {
-        "exceptions": []
-        },
-        "setTemplate": {
-        "template": "Email",
-        "exceptions": []
-        },
-        "setFields": {
-        "fieldCount": 2,
-        "exceptions": []
+        "documentLink": "https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{documentId}"
         }
-    },
-    "documentLink": "https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{documentId}"
-    }
-    ```
+        ```
 ## Next Steps
-- Check out additional [Guides](../../guides) for more walk-throughs and tutorials about the Laserfiche API.
+Check out additional [Guides](../../guides) for more walk-throughs and tutorials about the Laserfiche API.

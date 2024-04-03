@@ -10,7 +10,7 @@ grand_parent: API
 ---
 
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # Creating an OAuth Service App for the Laserfiche API
 
@@ -37,7 +37,9 @@ Create an OAuth Service App when you want to write a service application that ma
     - Creating an **authorization key** requires entering the service principal key for the selected service principal in the    - - {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
 
 1. When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
-    - {: .note } **Note:** Access keys should be securely stored.
+    
+    {: .note }
+    **Note:** Access keys should be securely stored.
 
 1. In the **OAuth 2.0 Scopes** section, select the needed scopes for your application to function properly. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
 
@@ -88,7 +90,8 @@ The JWT will also need to be signed by the **access key**. See the links below f
             }
             ```
 
-    - {: .note } For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
+        {: .note }
+        For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
 
     - On failure, the OAuth service will return an error response.
         - ```xml
