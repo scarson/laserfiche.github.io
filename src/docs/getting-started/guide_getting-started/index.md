@@ -27,7 +27,7 @@ Learn how to create a secure connection to Laserfiche and authenticate each API 
 
 ## Create Folders
 
-Create the folder structure in your repository.[Learn More](../../guides/documents-and-folders/guide_creating-folders-v2/)
+Create the folder structure in your repository. [Learn More](../../guides/documents-and-folders/guide_creating-folders-v2/)
 
 ## Write Field Values
 

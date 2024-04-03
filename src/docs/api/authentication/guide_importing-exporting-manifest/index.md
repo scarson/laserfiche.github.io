@@ -33,8 +33,9 @@ An application manifest is a JSON file that contains information about the appli
           ![](./assets/images/manifest-03.png)
 1. Click **Choose file** to select the manifest file that you want to use to create the application.
           ![](./assets/images/manifest-04.png)
-- {: .note } **Note:** the file must be in JSON format (with extension `.json` or
-            `.txt`) and contain all the required fields.
+    
+    {: .note }
+    **Note:** the file must be in JSON format (with extension `.json` or `.txt`) and contain all the required fields.
 1. Use the preview to verify that the manifest file looks correct and then click **Create
             application**.
 1. View the auto-created app configuration to verify that all the field values are correct and make changes as needed.

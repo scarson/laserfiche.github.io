@@ -39,7 +39,7 @@ The `index.md` jekyll front matter defines page data such as navigation order, t
 ```
 ---
 layout: default
-title: Laserfiche SharePoint Online Integration Administration Guide
+title: Laserfiche Title
 nav_order: 2
 has_children: true
 ---
@@ -59,7 +59,7 @@ To redirect from a list of links to a page, add a redirect-from key in the front
     - /docs/user-documentation/save-to-laserfiche
     - /docs/user-docs/save-to-lf
   nav_order: 1
-  parent: Laserfiche SharePoint Online Integration User Guide
+  parent: Laserfiche Title
   ---
   ```
 
@@ -87,4 +87,4 @@ bundle exec rake
 1. Run `jekyll serve` and browse <http://127.0.0.1:4000/>
 
 ## Pushing to production
-To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. You can view the results on [Github Pages](https://laserfiche.github.io/developer.laserfiche.com/).
+To push documentation changes to production, create a Pull Request to merge into the default branch. The PR completion will trigger the [documentation build pipeline](./.github/workflows/build-documentation.yml) which builds and publishes the documentation. You can view the results on [Github Pages](https://laserfiche.github.io).

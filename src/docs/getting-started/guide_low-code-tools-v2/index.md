@@ -66,16 +66,15 @@ See the [this guide](../../guides/documents-and-folders/guide_importing-document
   1. In Microsoft Power Automate, create a OneDrive **Get file metadata** action and select a document to import into Laserfiche.
   1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.
     ![](./assets/images/low-code-get-document.png)
-  1. Link an HTTP action to import the document into Laserfiche and assign a template and two fields.
-    ![](./assets/images/low-code-import-document-v2.png)
-    - The request **URI** is `https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{parentFolderId}/Folder/Import`. The hostname may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc., depending on the data center your Laserfiche Cloud repository resides in, where:
-      - `{repositoryId}` is your Laserfiche repository ID.
-      - `{parentFolderId}` is the Laserfiche entry ID of the folder the document will be imported to.
-      - `{documentName}` is the name of the document when imported to the Laserfiche repository.
-    - The Access Token from the **Get Laserfiche Access Token** [action](#authentication) must be added to the Authorization header.
-      Format the Authorization header value as follows `Bearer @{body('Get_Laserfiche_Access_Token')['access_token']}`.
-    - The request **body** is a multipart/form-data with two parts.
-      - The first part contains the file content from the **Get file content using path** action.
+  1. Link an HTTP action to import the document into Laserfiche and assign a template and two fields. ![](./assets/images/low-code-import-document-v2.png)
+  - The request **URI** is `https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{parentFolderId}/Folder/Import`. The hostname may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc., depending on the data center your Laserfiche Cloud repository resides in, where:
+    - `{repositoryId}` is your Laserfiche repository ID.
+    - `{parentFolderId}` is the Laserfiche entry ID of the folder the document will be imported to.
+    - `{documentName}` is the name of the document when imported to the Laserfiche repository.
+  - The Access Token from the **Get Laserfiche Access Token** [action](#authentication) must be added to the Authorization header.
+    Format the Authorization header value as follows `Bearer @{body('Get_Laserfiche_Access_Token')['access_token']}`.
+  - The request **body** is a multipart/form-data with two parts.
+    - The first part contains the file content from the **Get file content using path** action.
 
       {: .note }
       **Note:** The `Content-Type` header or the extension in the filename in the `Content-Disposition` header is used to determine the file type for the document imported to Laserfiche.
