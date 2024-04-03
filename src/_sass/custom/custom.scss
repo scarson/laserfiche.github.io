@@ -16,19 +16,29 @@ footer {
     flex-direction: column;
     align-items: center;
     
-    // .social-menu {
-    //   a {
-    //     background-color: $lf-orange;
-    //     color:white;
-    //     border: 1px solid $lf-orange;
-    //     font-size:1rem;
-    //     text-align:center;
-    //     height: 2.1875rem;
-    //     width: 2.1875rem;
+    .social-menu {
+      a {
+        background-color: $lf-orange;
+        color:white;
+        border: 1px solid $lf-orange;
+        border-radius:0.313rem;
+        font-size:1rem;
+        text-align:center;
+        height: 2.1875rem;
+        width: 2.1875rem;
+        line-height: 1.1875rem;
+        display:flex;
+        align-items:center;
+        justify-content: center;
 
-
-    //   }
-    // }
+        svg {
+          fill: currentColor;
+          display: inline-block;
+          height: 1em;
+          width: 1em;
+        }
+      }
+    }
   }
   .footer-links {
     display: flex;
