@@ -91,7 +91,7 @@ See the [importing a document guide](../../guides/documents-and-folders/guide_im
 1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.
     - ![](./assets/images/low-code-get-document.png)
 1. Link an HTTP action to import the document into Laserfiche and assign a template and two fields.
-    - ![](./assets/images/low-code-import-document.png
+    - ![](./assets/images/low-code-import-document.png)
     - The request **URI** is `https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{parentFolderId}/{documentName}?autoRename=true`. The hostname may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc., depending on the data center your Laserfiche Cloud repository resides in. If using the Self-Hosted Laserfiche API Server, the request URL needs to be updated to `https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Entries/{parentFolderId}/{documentName}?autoRename=true`. Where:
         - `{repositoryId}` is your Laserfiche repository ID.
         - `{parentFolderId}` is the Laserfiche entry ID of the folder the document will be imported to.

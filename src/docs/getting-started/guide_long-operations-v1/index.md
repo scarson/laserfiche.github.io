@@ -32,6 +32,7 @@ POST https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{des
     "sourceId": 9,
     "name": "MyCopiedFolder"
 }
+```
 
 The API call will return a token in the response:
 

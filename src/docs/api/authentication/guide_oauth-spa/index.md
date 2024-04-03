@@ -14,7 +14,8 @@ See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # Creating an OAuth Single-Page App for the Laserfiche API
 
-{: .note }**Note:** The following guide only applies to Laserfiche Cloud.
+{: .note }
+**Note:** The following guide only applies to Laserfiche Cloud.
 
 A single-page app (SPA) is a web application that runs entirely in the browser. The Laserfiche API supports SPAs using the OAuth authorization code flow with the Proof Key for Code Exchange (PKCE) extension.
 
