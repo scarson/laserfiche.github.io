@@ -1,5 +1,5 @@
 <!--Copyright (c) Laserfiche.
-Licensed under the MIT License. See LICENSE.md in the project root for license information.-->
+See LICENSE and LICENSE-CODE in the project root for license information.-->
 
 # Contributing to Laserfiche developer portal
 
