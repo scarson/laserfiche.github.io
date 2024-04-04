@@ -8,8 +8,8 @@ redirect_from:
 parent: Using the Laserfiche API with Low-Code Tools
 grand_parent: Getting Started
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 # Using the Laserfiche API with Low-Code Tools
  
  Use the Laserfiche API to access Laserfiche from low-code tools. This guide will demonstrate how to import a document into Laserfiche with Microsoft Power Automate. Other low-code tools may follow a similar model.

@@ -8,8 +8,8 @@ redirect_from:
 grand_parent: Guides
 parent: Repository Folders and Documents
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Retrieving the Contents of a Folder
 
