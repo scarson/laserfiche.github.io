@@ -7,8 +7,8 @@ redirect_from:
 parent: Getting Started
 has_children: true
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Using the Laserfiche API with Low-Code Tools (V2)
 

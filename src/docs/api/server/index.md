@@ -6,8 +6,8 @@ redirect_from:
     - api/server/index.html
 parent: API
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Self-Hosted Laserfiche API Server
 

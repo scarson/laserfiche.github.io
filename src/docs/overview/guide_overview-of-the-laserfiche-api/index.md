@@ -8,8 +8,8 @@ redirect_from:
 parent: Overview
 ---
 
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Overview of the Laserfiche API
 
