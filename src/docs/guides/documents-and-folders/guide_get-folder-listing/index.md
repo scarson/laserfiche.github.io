@@ -3,11 +3,12 @@ layout: default
 title: Get Folder Contents (V1)
 nav_order: 4
 redirect_from:
-    - guides/guide_get-folder-listing.html
-    - guide_get-folder-listing.html
+  - guides/guide_get-folder-listing.html
+  - guide_get-folder-listing.html
 grand_parent: Guides
 parent: Repository Folders and Documents
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -25,9 +26,11 @@ For this example scenario, we will retrieve a list of invoice documents from a f
 ![](./assets/images/doc-listing-01.png)
 
 There is no request body for this API since it is a GET request.
+
 ```xml
 GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/54/Laserfiche.Repository.Folder/children
 ```
+
 - The entry ID `54` in the request URL represents the ID of the folder we want to retrieve, in this case, the "Invoices" folder.
 
 A successful request will return a 200 HTTP response status code with the following response body (truncated for the sake of space).
@@ -206,6 +209,7 @@ We will retrieve the listing from the same Invoices folder, but this time we wan
 GET https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{entryId}/Laserfiche.Repository.Folder/children?
     $select=extension
 ```
+
 The response will look like the following (again, truncated for space).
 
 ```xml

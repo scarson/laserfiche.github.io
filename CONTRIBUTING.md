@@ -13,11 +13,11 @@ We encourage and appreciate feedback and contribution from the community!
 
 ## <a name="coc"></a> Code of Conduct
 
- Please read and follow our [Code of Conduct](./code_of_conduct.md).
+Please read and follow our [Code of Conduct](./code_of_conduct.md).
 
 ## <a name="question"></a> Question or Problem?
 
-Please post general questions on [Laserfiche Answers](https://answers.laserfiche.com/). Please include *laserfiche-developer Portal* for reference.
+Please post general questions on [Laserfiche Answers](https://answers.laserfiche.com/). Please include _laserfiche-developer Portal_ for reference.
 
 ## <a name="issue"></a> Issue and Feature Requests
 
@@ -29,6 +29,7 @@ Search [Github Issues](https://github.com/Laserfiche/laserfiche.github.io/issues
 - Link the issue addressed by the PR.
 - Add unit tests or document manual tests to validate the changes.
 - Workflow shall triggers all unit tests. For a pull request to be accepted, all unit tests must pass when run workflow.
+- Format Documents (Shift + Alt + F) which have been created or modified
 
 After the submission, core members of the project will review the code.
 

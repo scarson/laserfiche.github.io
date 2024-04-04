@@ -3,9 +3,10 @@ layout: default
 title: Libraries
 nav_order: 2
 redirect_from:
-    - libraries.html
+  - libraries.html
 parent: API
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -42,6 +43,5 @@ Client Core API: [Documentation](https://laserfiche.github.io/lf-api-client-core
 Repository API: [Documentation](https://laserfiche.github.io/lf-repository-api-client-java/docs/v2/index.html), [JAR Files](https://central.sonatype.com/artifact/com.laserfiche/lf-repository-api-client-v2/versions)
 
 Sample Projects: [Console Application](https://github.com/Laserfiche/lf-sample-repository-api-java)
-
 
 Looking to use the Laserfiche API in a different programming language? The Laserfiche API is OpenAPI compliant, so you can generate your own client library in the language of your choice. Check out the [Swagger Playground](https://api.laserfiche.com/repository/swagger/index.html) for a copy of the swagger.json file.

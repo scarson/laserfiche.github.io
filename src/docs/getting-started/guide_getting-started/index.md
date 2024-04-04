@@ -3,10 +3,11 @@ layout: default
 title: Getting Started
 nav_order: 2
 redirect_from:
-    - guides/guide_getting-started.html
-    - guide_getting-started.html
+  - guides/guide_getting-started.html
+  - guide_getting-started.html
 has_children: true
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -23,6 +24,7 @@ Follow our step-by-step guide to authenticate and interact with our Swagger Play
 Looking for core repository functionality? Learn how you can authenticate to the Laserfiche API, create some folders, write field values and import documents to your repository.
 
 ## Authenticate to the Laserfiche API
+
 Learn how to create a secure connection to Laserfiche and authenticate each API request. [Learn More](../../api/authentication/guide_authenticate-to-the-laserfiche-api/)
 
 ## Create Folders
@@ -50,5 +52,6 @@ Leverage the Laserfiche API to build integrations with other enterprise platform
 - **CRM integration.** The sales department uses a CRM platform to manage all customer data. They'd like to store copies of all customer emails and communications in the Laserfiche repository. With the Laserfiche API, an integration can automatically push customer-related documents from the CRM platform to the repository for archival and retention.
 
 ## Next Steps:
+
 - Check out our [Guides](../../guides/) page for more walk-throughs and tutorials about the Laserfiche API.
 - If you're new to RESTful web APIs, check out our [overview](../../overview/guide_overview-of-the-laserfiche-api/) to learn what the API looks like and how it works.

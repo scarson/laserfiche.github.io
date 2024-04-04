@@ -3,10 +3,11 @@ layout: default
 title: Search (V2)
 nav_order: 3
 redirect_from:
-   - /guides/v2/guide_search-v2.html
+  - /guides/v2/guide_search-v2.html
 parent: Repository Search
 grand_parent: Guides
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -23,7 +24,8 @@ A search operation follows the [long operation](../../../getting-started/guide_l
 1. The client application can check the status of the operation by using the task ID returned in step 2.
 1. When the operation completes, the result of the operation can also be retrieved by using the same task ID returned in step 2.
 
-In the following example, we'll search a specific folder, *Meeting Minutes*, for entries with the phrase *Windham Ave* in their names, document text, fields, or annotation text.
+In the following example, we'll search a specific folder, _Meeting Minutes_, for entries with the phrase _Windham Ave_ in their names, document text, fields, or annotation text.
+
 ```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/SearchAsync
 {
@@ -35,6 +37,7 @@ POST https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/Sea
 **Note:** See the Laserfiche user guide for more information on the [Laserfiche Search Syntax](https://doc.laserfiche.com/laserfiche.documentation/11/userguide/en-us/Default.htm#../Subsystems/client_wa/Content/Search/Advanced/Basic_Search.htm) and [Fuzzy Search](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/publicportal/Content/Search_Options_Tab.htm).
 
 This call will return a task ID that represents the running search operation.
+
 ```xml
 HTTP 202 Accepted
 {
@@ -42,10 +45,12 @@ HTTP 202 Accepted
 "taskId": "f1201c58-0dd0-4e39-abcc-450acff1b791"
 }
 ```
+
 Check the status of the search operation by calling `GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Tasks?taskIds={taskId}` with the returned task ID:
 
 `GET https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Tasks?taskIds=f1201c58-0dd0-4e39-abcc-450acff1b791`
 The response will return the status of the operation, for example:
+
 ```xml
 HTTP 202 Accepted
 {
@@ -67,9 +72,11 @@ HTTP 202 Accepted
 ]
 }
 ```
+
 The above response shows that the search is complete. The search results set can be retrieved by making a GET request to the value of `uri` property which is returned in the response body.
 `GET https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/f1201c58-0dd0-4e39-abcc-450acff1b791/Results`
 The response will contain a list of entries representing the results of your search query, for example:
+
 ```xml
 HTTP 200 Ok
 {
@@ -78,7 +85,7 @@ HTTP 200 Ok
     {
         "id": 1234,
         "isContainer": false,
-        "isLeaf": true,        
+        "isLeaf": true,
         "name": "MinutesDocument",
         "parentId": 1230,
         "fullPath": null,
@@ -95,7 +102,7 @@ HTTP 200 Ok
     {
         "id": 1235,
         "isContainer": false,
-        "isLeaf": true,        
+        "isLeaf": true,
         "name": "MeetingNotes",
         "parentId": 1230,
         "fullPath": null,
@@ -118,10 +125,13 @@ HTTP 200 Ok
 **Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing-v2#retrieve-field-metadata-for-each-document).
 
 To get the text context hits for a document in the search results, we can call `GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Searches/{taskId}/Results/{rowNumber}/ContextHits` with the appropriate row number of the search result.
+
 ```xml
     GET https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Searches/f1201c58-0dd0-4e39-abcc-450acff1b791/Results/18/ContextHits
 ```
+
 The call will return all of the context hits with "Windham Ave" that was found in the specified document.
+
 ```xml
 HTTP 200 Ok
 {

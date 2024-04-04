@@ -3,10 +3,11 @@ layout: default
 title: Long Operations
 nav_order: 3
 redirect_from:
-   - /guides/v2/guide_long-operations-v2.html
+  - /guides/v2/guide_long-operations-v2.html
 parent: Getting Started
 has_children: true
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -15,7 +16,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 {: .note }
 To see the guide for V1, click [here](../guide_long-operations-v1/).
 
-Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API follows the [Asynchronous Request-Reply](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply) pattern, where the call will return a *task ID* representing the work of the request. Client applications can then use this task ID to retrieve the status of the operation and the completed result of the action.
+Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API follows the [Asynchronous Request-Reply](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply) pattern, where the call will return a _task ID_ representing the work of the request. Client applications can then use this task ID to retrieve the status of the operation and the completed result of the action.
 
 The Copy, Delete, and the asynchronous versions of the Import, Export and Search APIs follow this pattern.
 
@@ -29,6 +30,7 @@ The flow of calls is summarized below:
 Let's look at a specific example with the copy entry API call.
 
 First we’ll call the copy API to copy a folder and its content to another folder in the repository:
+
 ```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{destinationEntryId}/Folder/CopyAsync
 {
@@ -80,7 +82,7 @@ HTTP 200 OK
 
 In the above example response, the operation has completed successfully.
 
-If we make a GET request using the *uri* received in the response:
+If we make a GET request using the _uri_ received in the response:
 
 ```xml
 GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Entries/{newlyCreatedEntryId}

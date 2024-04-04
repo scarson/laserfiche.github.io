@@ -3,12 +3,14 @@ layout: default
 title: Assign Links (V2)
 nav_order: 7
 redirect_from:
-   - /guides/v2/guide_assign-links-v2.html
+  - /guides/v2/guide_assign-links-v2.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
+
 # Assign Links (V2)
 
 {: .note }
@@ -46,7 +48,6 @@ PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/10/Li
 ```
 
 Note that this call will overwrite any existing links on the source entry. If you want to add new links to an entry and keep the existing links, you will need to provide both the existing links and the new links in the request body. If you want to remove all links on an entry, you can provide an empty list.
-
 
 The response will contain the list of all links assigned to the source entry. Each link will contain properties on the source and target entries, as well as a URI to get the source entry and target entry. These URIs can be used by making a GET request to the URI specified by the sourceLink or targetLink properties.
 
