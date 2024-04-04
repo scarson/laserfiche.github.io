@@ -3,11 +3,12 @@ layout: default
 title: Create Folders (V1)
 nav_order: 2
 redirect_from:
-    - guides/guide_creating-folders.html
-    - guide_creating-folders.html
+  - guides/guide_creating-folders.html
+  - guide_creating-folders.html
 parent: Repository Folders and Documents
 grand_parent: Guides
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -16,6 +17,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 Folders are the basis for organizing all of the content in your repository. You can create folders with the Laserfiche API by using the following POST API.
 
 {: .note }
+
 ```xml
 POST https://api.laserfiche.com/repository/v1/Repositories/repoId/Entries/entryId/Laserfiche.Repository.Folder/children
 ```
@@ -46,7 +48,6 @@ POST https://api.laserfiche.com/repository/v1/Repositories/r-abcd1234/Entries/90
 
 {: .note }
 **Note:** This API call also supports creating Shortcut entry types.
-
 
 If successful, the API will return a 201 HTTP response status code indicating that the new folder resource was created. The response body will include all of the properties of the newly created folder.
 

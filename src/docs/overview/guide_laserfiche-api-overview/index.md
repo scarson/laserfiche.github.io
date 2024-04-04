@@ -4,16 +4,16 @@ title: Laserfiche API Overview
 nav_order: 3
 parent: Overview
 redirect_from:
-    - api/index.html
-    - api.html
+  - api/index.html
+  - api.html
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche REST API
 
-Laserfiche provides integrators with a REST API for Cloud and [Self-Hosted](../../api/server/) Laserfiche installations.  Get started learning about the capabilities of our API by browsing the sections below.  Find out more about our API Server for self-hosted installations [here](../../api/server/).
-
+Laserfiche provides integrators with a REST API for Cloud and [Self-Hosted](../../api/server/) Laserfiche installations. Get started learning about the capabilities of our API by browsing the sections below. Find out more about our API Server for self-hosted installations [here](../../api/server/).
 
 ### [Overview](../guide_overview-of-the-laserfiche-api/)
 
@@ -29,4 +29,4 @@ Start exploring the Laserfiche API in our Swagger playground.
 
 ### [API Client Libraries](../../api/libraries/)
 
-Leverage our open source resources to kick-start your development efforts.  We've built client libraries for popular programming languages and sample projects to boost your learning.
+Leverage our open source resources to kick-start your development efforts. We've built client libraries for popular programming languages and sample projects to boost your learning.

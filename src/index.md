@@ -3,10 +3,11 @@ layout: default
 title: Overview
 nav_order: 1
 redirect_from:
-    - guide.html
-    - guides/index.html
+  - guide.html
+  - guides/index.html
 has_children: true
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -15,7 +16,6 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 ## Overview of the Laserfiche API
 
 Get started with the Laserfiche API basics, including how to use it and how it works. [Learn More](./docs/overview/guide_overview-of-the-laserfiche-api/)
-
 
 ## Authenticating to the Laserfiche API
 
@@ -27,4 +27,4 @@ Follow our step-by-step guide to authenticate and interact with our Swagger Play
 
 ## Building Laserfiche Apps
 
-Start building apps using building block libraries that streamline the process of consuming the Laserfiche API. [Learn More](./docs/guides/guide_building-apps/) 
+Start building apps using building block libraries that streamline the process of consuming the Laserfiche API. [Learn More](./docs/guides/guide_building-apps/)

@@ -3,9 +3,10 @@ footer {
   a:not([class]) {
     text-decoration: none;
   }
-  ul, ol {
-    list-style-type:none;
-    padding-inline-start:0px;
+  ul,
+  ol {
+    list-style-type: none;
+    padding-inline-start: 0px;
     margin: 12px;
     margin-left: 0px;
   }
@@ -15,20 +16,20 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     .social-menu {
       a {
         background-color: $lf-orange;
-        color:white;
+        color: white;
         border: 1px solid $lf-orange;
-        border-radius:0.313rem;
-        font-size:1rem;
-        text-align:center;
+        border-radius: 0.313rem;
+        font-size: 1rem;
+        text-align: center;
         height: 2.1875rem;
         width: 2.1875rem;
         line-height: 1.1875rem;
-        display:flex;
-        align-items:center;
+        display: flex;
+        align-items: center;
         justify-content: center;
 
         svg {
@@ -45,27 +46,28 @@ footer {
     justify-content: space-around;
     span {
       font-weight: bold;
-      color:$lf-orange;
+      color: $lf-orange;
       margin: 10px;
     }
 
-    .Resources, .about-footer-menu{
+    .Resources,
+    .about-footer-menu {
       padding: 10px;
       .intermediate-menu {
-        display:flex;
+        display: flex;
         flex-direction: row;
         align-items: space-around;
         span {
           color: #8ba1b0;
-          font-weight:bold;
+          font-weight: bold;
         }
         .sub-menu {
           span {
             color: #222c33;
-            font-weight:normal;
+            font-weight: normal;
           }
         }
-        #ot-sdk-btn  {
+        #ot-sdk-btn {
           border: none !important;
           background: transparent;
           color: #222c33;
@@ -75,27 +77,23 @@ footer {
           line-height: 1.3;
           border: none;
           padding: 0;
-          margin-left:10px;
-
+          margin-left: 10px;
         }
       }
-
-
     }
   }
 
   .social-menu {
     display: block;
     ul {
-        list-style-type:none;
-        display: flex;
-        flex-direction: row;
-        li {
-            margin:10px;
-        }
-
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      li {
+        margin: 10px;
+      }
     }
-}
+  }
 }
 
 .screen-reader-text {

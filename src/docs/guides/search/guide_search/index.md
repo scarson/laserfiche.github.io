@@ -8,6 +8,7 @@ redirect_from:
 parent: Repository Search
 grand_parent: Guides
 ---
+
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
@@ -18,11 +19,11 @@ Use the search API to find entries in your Laserfiche Cloud repository.
 A search operation follows the [long operation](../../../getting-started/guide_long-operations-v1/) pattern.
 
 1. The client application launches a search query by calling the search API
-1. The API call will immediately return a token while the search continues running in Laserfiche Cloud. 
+1. The API call will immediately return a token while the search continues running in Laserfiche Cloud.
 1. The client application can check the status of the operation by using the token returned in step 2.
 1. When the operation completes, the result of the operation can also be retrieved by using the same token returned in step 2.
 
-In the following example, we'll search a specific folder, *Meeting Minutes*, for document text, fields, annotation text, and entry names for the phrase *Windham Ave*:
+In the following example, we'll search a specific folder, _Meeting Minutes_, for document text, fields, annotation text, and entry names for the phrase _Windham Ave_:
 
 ```xml
 POST https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Searches
