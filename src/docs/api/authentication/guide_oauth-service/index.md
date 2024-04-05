@@ -24,36 +24,38 @@ Create an OAuth Service App when you want to write a service application that ma
 
 ## Create a Laserfiche Cloud Service Principal
 
-1.  Go to the Laserfiche Account Administration page
-1.  Get an existing service principal account and its service principal key or create a new one if necessary. See the [Service Principals guide](../guide_service-principals/) for more details.
+1. Go to the Laserfiche Account Administration page
+1. Get an existing service principal account and its service principal key or create a new one if necessary. See the [Service Principals guide](../guide_service-principals/) for more details.
 
 ## Register your Service App in the Developer Console
 
-1.  Sign in to the [Developer Console](../../../getting-started/developer-console/).
-1.  Click **New** to display the **Create Application** dialog box. Select the option to create a new app and then select the **Service** app type and give the app a name.
-1.  On the **App Configuration** page, in the Service Account field, select the appropriate service principal that the application will use and **save** the changes.
-1.  Take note of the auto-generated Client ID.
-1.  On the **Authentication** tab in the **OAuth 2.0 Scopes** section, select the allowed scopes for your application. These are the scopes that you will be able to request when obtaining an access token. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
-1.  On the **Authentication** tab, create a new Access Key. There are three types of Access Keys you can create. Two require the use of the OAuth client credentials flow, and the last generates a username and password you can use directly with the APIs.
+1. Sign in to the [Developer Console](../../../getting-started/developer-console/).
+1. Click **New** to display the **Create Application** dialog box. Select the option to create a new app and then select the **Service** app type and give the app a name.
+1. On the **App Configuration** page, in the Service Account field, select the appropriate service principal that the application will use and **save** the changes.
+1. Take note of the auto-generated Client ID.
+1. On the **Authentication** tab in the **OAuth 2.0 Scopes** section, select the allowed scopes for your application. These are the scopes that you will be able to request when obtaining an access token. See [OAuth 2.0 Scopes for Laserfiche APIs](../guide_oauth_2.0_scopes/) for more details.
+1. On the **Authentication** tab, create a new Access Key. There are three types of Access Keys you can create. Two require the use of the OAuth client credentials flow, and the last generates a username and password you can use directly with the APIs.
 
-    - Choose create a public **access key** if the service app uses the [Laserfiche API client libraries](../../libraries/) or is capable of generating an HMAC client credential. Once generated, continue to the next step for details on generating an HMAC client credential and requesting an access token.
-    - Choose create a long-lasting **authorization key** if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v1/) that require a static secret to connect to Laserfiche APIs. Once generated, continue to the next step to obtain your token.
-        - Creating an **authorization key** requires entering the service principal key for the selected service principal in the - - {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
-    - Choose create a **username and password** if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API. Once generated, you can skip the next step for generating OAuth credentials section below and go directly to **Use the credentials to access Laserfiche APIs**.
-        - Creating an **username and password** requires entering the service principal key for the selected service principal in the - - {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
-        - To create a **username and password** you must specify requested scopes. This is required for the username and password at this step since you do not have the additional step of requesting an access token, which is where this will be specified for the other applications. This should fall within the allowed scopes of your application, the acess token will return the intersection of the allowed and requested scopes.
+   - Choose create a public **access key** if the service app uses the [Laserfiche API client libraries](../../libraries/) or is capable of generating an HMAC client credential. Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to generate an HMAC client credential and request an access token.
+   - Choose create a long-lasting **authorization key** if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v1/) that require a static secret to connect to Laserfiche APIs. Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to obtain your token. You can skip the first section for generating an HMAC credential since the authorization key can be used directly with the token service.
+     - Creating an **authorization key** requires entering a valid service principal key for the selected service principal
+     - {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
+   - Choose create a **username and password** if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API. Once generated, you can skip the next step for generating OAuth credentials section below and go directly to **Use the credentials to access Laserfiche APIs**.
+     - Creating an **username and password** a valid service principal key for the selected service principal
+     - {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
+     - To create a **username and password** you must specify requested scopes. This is required for the username and password at this step since you do not have the additional step of requesting an access token, which is where this will be specified for the other applications. This should fall within the allowed scopes of your application, the acess token will return the intersection of the allowed and requested scopes.
 
-1.  When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
+1. When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
 
-    - {: .note } **Note:** Access keys should be securely stored.
+   - {: .note } **Note:** Access keys should be securely stored.
 
 ## OAuth Client Credentials Grant Flow
 
-- **Note:** This flow can be skipped if you are using Basic Authentication with a **username and password**. You can proceed directly to **Use the credentials to Laserfiche APIs**.
+- **Note:** This section can be skipped if you are using Basic Authentication with a **username and password**. You can proceed directly to [Use the credentials to Laserfiche APIs](#use-the-credentials-to-access-the-laserfiche-api) section.
 
 1. Generate an HMAC Client Credential
 
-   - **Note:** This step can be skipped if a long-lasting **authorization key** was created, the authorization key can be used as the HMAC client credential. Continue to the next step of requesting an access token.
+   - **Note:** This step can be skipped if a long-lasting **authorization key** was created, the authorization key can be used as the HMAC client credential. Continue to the next step to request an access token.
 
    If a public **access key** was created, an HMAC client credential will need to be generated. The HMAC client credential is a JWT and should contain the following claims.
 
@@ -72,7 +74,7 @@ Create an OAuth Service App when you want to write a service application that ma
 
 1. Request an Access Token
 
-   1. The service application can then issue a POST request with the generated HMAC client credential JWT in the Bearer Authorization header to request an access token.
+   1. The service application can then issue a POST request with the generated HMAC client credential JWT or Authorization Key in the Bearer Authorization header to request an access token.
 
       - ```xml
           POST https://signin.laserfiche.com/oauth/token HTTP/1.1
@@ -132,35 +134,35 @@ Create an OAuth Service App when you want to write a service application that ma
 
 - Using an OAuth Access Token (generated from OAuth Credentials Flow)
 
-    Include the access token in the Bearer Authorization header when accessing the Laserfiche API.
+  Include the access token in the Bearer Authorization header when accessing the Laserfiche API.
 
-    Use the **Repositories** route to get a list of repositories current user have access to.
+  Use the **Repositories** route to get a list of repositories current user have access to.
 
-    ```xml
-    GET https://api.laserfiche.com/repository/v1/Repositories
-    Authorization: Bearer some_access_token_value
-    ```
+  ```xml
+  GET https://api.laserfiche.com/repository/v1/Repositories
+  Authorization: Bearer some_access_token_value
+  ```
 
-    {: .note }
-    The OAuth access token is supported for repository v1 and later APIs.
+  {: .note }
+  The OAuth access token is supported for repository v1 and later APIs.
 
-    You can make repository API calls like so:
+  You can make repository API calls like so:
 
-    ```xml
-    GET https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{entryId}
-    Authorization: Bearer some_access_token_value
-    ```
+  ```xml
+  GET https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{entryId}
+  Authorization: Bearer some_access_token_value
+  ```
 
 - Using a username and password
 
-    Include the username and password in the Basic Authorization header when accessing the Laserfiche API. This should follow the Basic Authentication standard of _username:password_, base64-encoded
+  Include the username and password in the Basic Authorization header when accessing the Laserfiche API. This should follow the Basic Authentication standard of _username:password_, base64-encoded
 
-    {: .note }
-    Basic Authentication is supported for Table APIs.
+  {: .note }
+  Basic Authentication is supported for Table APIs.
 
-    You can make Table API calls like so:
+  You can make Table API calls like so:
 
-    ```xml
-    GET https://api.laserfiche.com/odata4/table
-    Authorization: Basic base64_encoded_username:password
-    ```
+  ```xml
+  GET https://api.laserfiche.com/odata4/table
+  Authorization: Basic base64_encoded_username:password
+  ```
