@@ -3,13 +3,14 @@ layout: default
 title: Authentication
 nav_order: 3
 redirect_from:
-    - guides/guide_authenticating-to-the-laserfiche-api.html
-    - guide_authenticating-to-the-laserfiche-api.html
+  - guides/guide_authenticating-to-the-laserfiche-api.html
+  - guide_authenticating-to-the-laserfiche-api.html
 has_children: true
 parent: API
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Creating a Connection
 

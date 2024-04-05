@@ -3,20 +3,23 @@ layout: default
 title: Long Operations (V1)
 nav_order: 1
 redirect_from:
-    - guides/guide_long-operations.html
-    - guide_long-operations.html
+  - guides/guide_long-operations.html
+  - guide_long-operations.html
 parent: Long Operations
 grand_parent: Getting Started
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Long Operations
+
 Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API uses a "long operation" pattern where the call will return a token representing the work of the request. Client applications can then use this token to retrieve the status of the operation and the completed result of the action.
 
 The Copy and Delete APIs both follow this long operation pattern.
 
 The flow of calls is summarized below:
+
 1. The client application issues a copy or delete API call
 1. When Laserfiche Cloud receives the request, it will start performing the operation, but the API call will immediately return a token back to the client
 1. While the copy or delete operation is being performed, the client can check the status of the operation using the token returned in step 2.
@@ -32,6 +35,7 @@ POST https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{des
     "sourceId": 9,
     "name": "MyCopiedFolder"
 }
+```
 
 The API call will return a token in the response:
 
@@ -43,6 +47,7 @@ HTTP 202 Accepted
 ```
 
 Long operation APIs can be found under the Tasks resource. Using the token that we just received, we can check the status of the task. This call does not have a request body:
+
 ```xml
 GET https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Tasks/{operationToken}
 ```
@@ -72,6 +77,7 @@ If we make a GET request using the link
 ```xml
 GET https://api.laserfiche.com/repository/v1/Repositories/{repoId}/Entries/{newlyCreatedEntryId}
 ```
+
 We will get back the newly created entry details, see the following sample response:
 
 ```xml
@@ -100,4 +106,4 @@ HTTP 200 Ok
 **Note:** For Laserfiche Cloud, only 1 concurrent long operation can be run per user session. If you start an operation and then decide to cancel the operation, use the DELETE https://api.laserfiche.com/repository/v1/Repositories/{*repoId*}/Tasks/{*operationToken*} API to stop the operation. Stopping an operation while it is in progress can yield partial results of the original operation. For example, when copying a folder, some entries may be created prior to the operation stopping.
 
 {: .note }
-**Note:** Tokens will expire 15 minutes  after its corresponding operation has completed.
+**Note:** Tokens will expire 15 minutes after its corresponding operation has completed.

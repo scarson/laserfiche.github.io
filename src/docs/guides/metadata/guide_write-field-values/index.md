@@ -10,8 +10,9 @@ redirect_from:
 parent: Repository Metadata
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Write Field Values
 
@@ -20,7 +21,6 @@ Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.
 A field contains a piece of information about a document, such as an author name, an invoice number, a phone number, or an address. Fields can make it easier to search for an item: you can search for a document or folder by its field values, allowing you to quickly locate documents based on information such as an invoice number or customer name.
 
 **Request Overview**
-        
 
 {: .note }
 PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/fields
@@ -66,6 +66,7 @@ PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345
 ```
 
 {: .note }
+
 - If there are other fields with existing values assigned to the entry, your request body must include the existing values or else the update will clear out values not included in the request.
 - For the **Date**, the value should not contain any time zone information. Datetime values are stored as-is in the repository. If the value contains any time zone offset information like "Z" or "+08:00", the request will be rejected.
 

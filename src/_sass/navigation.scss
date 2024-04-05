@@ -8,13 +8,13 @@
   list-style: none;
 
   .nav-list-item {
-    @include fs-4;
+    @include fs-5;
 
     position: relative;
     margin: 0;
 
     @include mq(md) {
-      @include fs-3;
+      @include fs-4;
     }
 
     .nav-list-link {

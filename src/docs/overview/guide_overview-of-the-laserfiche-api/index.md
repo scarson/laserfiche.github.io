@@ -8,8 +8,8 @@ redirect_from:
 parent: Overview
 ---
 
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Overview of the Laserfiche API
 
@@ -17,7 +17,7 @@ The Laserfiche API is a set of RESTful web APIs that allows you interact with La
 
 ## Cloud vs Self-Hosted
 
-We provide a REST API for Laserfiche Cloud and Self-Hosted systems.  More information on how to download and install the Laserfiche API Server for your self-hosted system can be found [here](../../api/server/).
+We provide a REST API for Laserfiche Cloud and Self-Hosted systems. More information on how to download and install the Laserfiche API Server for your self-hosted system can be found [here](../../api/server/).
 
 ## API Requests
 
@@ -36,18 +36,19 @@ All Laserfiche API request URLs can be broken down in the following parts:
 
 The HTTP method is also known as an HTTP verb.
 
-| Method | Description | Idempotent | Semantic |
-| --- | --- | --- | --- |
-| GET | Read data from the specified resource | X | Read, Search |
-| POST | Create a new resource, or perform an action |  | Create, Perform action |
-| PATCH | Update a resource with new values | --- | Update |
-| PUT | Replace a resource with a new one | --- | Replace |
-| DELETE | Remove a resource | X | Delete |
+| Method | Description                                 | Idempotent | Semantic               |
+| ------ | ------------------------------------------- | ---------- | ---------------------- |
+| GET    | Read data from the specified resource       | X          | Read, Search           |
+| POST   | Create a new resource, or perform an action |            | Create, Perform action |
+| PATCH  | Update a resource with new values           | ---        | Update                 |
+| PUT    | Replace a resource with a new one           | ---        | Replace                |
+| DELETE | Remove a resource                           | X          | Delete                 |
 
 - GET and DELETE calls will not contain an HTTP request body
 - POST, PATCH, and PUT may require an HTTP request body, typically in JSON format.
 
 ### API Set
+
 API sets are used to help organize the Laserfiche API and often correspond to distinct sub-services or applications in the Laserfiche suite. API set names are lowercase, follow the rules for DNS labels, and are usually singular nouns.
 Currently the Laserfiche API supports two API sets:
 
@@ -86,7 +87,7 @@ The beta tag indicates that the API is undergoing only minor revision and will g
 
 ### Resource
 
-Resources in Laserfiche Cloud are represented in the URL of the API call. The naming convention for Laserfiche-defined resources are upper case, plural nouns that are typically followed by a unique identifier. Multiple resources are strung together to show the hierarchical relationship between them. For example: 
+Resources in Laserfiche Cloud are represented in the URL of the API call. The naming convention for Laserfiche-defined resources are upper case, plural nouns that are typically followed by a unique identifier. Multiple resources are strung together to show the hierarchical relationship between them. For example:
 
 Repository API: `GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/888`
 
@@ -96,15 +97,15 @@ For the Table API (Preview), the resources are user-defined. For example:
 
 Table API: `GET https://api.laserfiche.com/odata4/table/MyTable('{1}')`
 
-After the `table` segment, the resource can be interpreted as "in the MyTable resource with row key 1." *MyTable* is the name of a Laserfiche lookup table.
+After the `table` segment, the resource can be interpreted as "in the MyTable resource with row key 1." _MyTable_ is the name of a Laserfiche lookup table.
 
 ### Query Parameters
 
-Query parameters attached to the end of a request can alter the behavior of the API calls. Some calls support standard OData query parameters, and some API calls may have additional custom query parameters specific to the call. To learn more about specific OData query parameters, see [this example](../../guides/documents-and-folders/guide_get-folder-listing/#customizing-the-listing-response-with-query-parameters) on retrieving an entry listing from a folder. 
+Query parameters attached to the end of a request can alter the behavior of the API calls. Some calls support standard OData query parameters, and some API calls may have additional custom query parameters specific to the call. To learn more about specific OData query parameters, see [this example](../../guides/documents-and-folders/guide_get-folder-listing/#customizing-the-listing-response-with-query-parameters) on retrieving an entry listing from a folder.
 
 ## API Responses
 
-After issuing a request to Laserfiche API endpoint, the response will include: 
+After issuing a request to Laserfiche API endpoint, the response will include:
 
 - HTTP response status code
 - Response body
@@ -113,15 +114,13 @@ After issuing a request to Laserfiche API endpoint, the response will include:
 
 The code will indicate the outcome of the request.
 
-
 ### Response Body
 
 The body of the response will typically be in JSON or XML format. It will contain the requested data of the resource or the result of the request.
 
 Paging
 
-In some cases, a response body can return a large amount of data that would be inconvenient to try and return in a single response. In these cases, an OData `NextLink` is generated at the end of the request of body. This link can be used to request the next set of results from the original request. 
-
+In some cases, a response body can return a large amount of data that would be inconvenient to try and return in a single response. In these cases, an OData `NextLink` is generated at the end of the request of body. This link can be used to request the next set of results from the original request.
 
 ### Next Steps
 

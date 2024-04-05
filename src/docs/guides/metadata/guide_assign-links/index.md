@@ -3,13 +3,14 @@ layout: default
 title: Assign Links (V1)
 nav_order: 8
 redirect_from:
-    - guides/guide_assign-links.html
-    - guide_assign-links.html
+  - guides/guide_assign-links.html
+  - guide_assign-links.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Links (V1)
 
@@ -21,7 +22,6 @@ For example, you might connect documents of different types that are related in 
 
 {: .note }
 PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryID*/links
-
 
 The following sample request links an email message to another document that is the email attachment.
 

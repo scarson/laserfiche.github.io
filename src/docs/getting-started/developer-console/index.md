@@ -3,12 +3,12 @@ layout: default
 title: Laserfiche Developer Console
 nav_order: 1
 redirect_from:
-    - developer-console.html
+  - developer-console.html
 parent: Getting Started
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
 
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche Developer Console
 
@@ -26,4 +26,4 @@ To access the Developer Console, depending on where your Laserfiche Cloud data r
 - European Data Center: [https://app.eu.laserfiche.com/devconsole](https://app.eu.laserfiche.com/devconsole)
 
 {: .note }
-**Note:** Access to the Developer Console requires the *Developer Console Administrator* role. Creating or modifying an OAuth Service App requires the *Trustee Administration* role. Set roles from the Laserfiche Cloud Account Administration site.
+**Note:** Access to the Developer Console requires the _Developer Console Administrator_ role. Creating or modifying an OAuth Service App requires the _Trustee Administration_ role. Set roles from the Laserfiche Cloud Account Administration site.

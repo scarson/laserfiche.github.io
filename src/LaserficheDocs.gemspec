@@ -6,13 +6,13 @@ Gem::Specification.new do |spec|
     spec.authors       = ["Laserfiche"]
   
     spec.summary       = %q{Jekyll theme for Laserfiche Technical Documentation based on Just-The-Docs}
-    spec.homepage      = "https://github.com/Laserfiche/laserfiche-sharepoint-integration"
+    spec.homepage      = "https://github.com/Laserfiche/laserfiche.github.io"
     spec.license       = "MIT"
     spec.metadata      = {
-      "bug_tracker_uri"   => "https://github.com/Laserfiche/laserfiche-sharepoint-integration/issues",
-      "changelog_uri"     => "https://github.com/Laserfiche/laserfiche-sharepoint-integration/CHANGELOG.md",
-      "documentation_uri" => "https://laserfiche.github.io/laserfiche-sharepoint-integration/",
-      "source_code_uri"   => "https://github.com/Laserfiche/laserfiche-sharepoint-integration",
+      "bug_tracker_uri"   => "https://github.com/Laserfiche/laserfiche.github.io/issues",
+      "changelog_uri"     => "https://github.com/Laserfiche/laserfiche.github.io/CHANGELOG.md",
+      "documentation_uri" => "https://laserfiche.github.io/laserfiche.github.io/",
+      "source_code_uri"   => "https://github.com/Laserfiche/laserfiche.github.io",
     }
   
     spec.add_development_dependency "bundler", ">= 2.3.5"

@@ -3,35 +3,27 @@ layout: default
 title: Assign Template (V2)
 nav_order: 1
 redirect_from:
-   - /guides/v2/guide_assign-template-v2.html
+  - /guides/v2/guide_assign-template-v2.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
 
-  
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
+
 # Assign Template (V2)
-
 
 {: .note }
 To see the guide for V1, click [here](../guide_assign-template/).
 
-
 Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Fields_and_Templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
-
 
 A field contains a piece of information about a document, such as an author name, an invoice number, a phone number, or an address. A template is a collection of related fields. Assigning a template to a document or folder allows you to assign multiple related fields at once. Only one template may be applied to a document or folder at a time. Fields can be added to the entry either individually or through a template, and there is no limit to how many fields can be added.
 
-
 **Request Overview**
-
-
-
 
 {: .note }
 PUT https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Template
-
 
 The example request assigns the **Email** template to the entry with entry ID **12345**. It also assigns values to the **Sender**, **Recipients**, and **Subject** fields in the template. In this example, **Recipients** is a multi-value field and we can assign more than one value.
 
@@ -162,7 +154,7 @@ HTTP 200 Ok
   "extension": "pdf",
   "isElectronicDocument": true,
   "isRecord": false,
-  "mimeType": "application/pdf", 
+  "mimeType": "application/pdf",
   "pageCount": 12,
   "isCheckedOut": false,
   "isUnderVersionControl": false

@@ -3,11 +3,12 @@ layout: default
 title: Self-Hosted Server
 nav_order: 4
 redirect_from:
-    - api/server/index.html
+  - api/server/index.html
 parent: API
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Self-Hosted Laserfiche API Server
 
@@ -29,7 +30,6 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 - Internet Information Services (IIS)
 - .NET 6
 - The Laserfiche API Server supports connecting to Laserfiche Server 11 repositories.
-                
 
 ### Installation steps
 
@@ -42,21 +42,21 @@ The self-hosted Laserfiche API Server can be installed to connect with your self
 1. Navigate to the directory `%ProgramData%\Laserfiche\API Server\LFRepositoryAPI` and **open** `appsettings.json` using a text editor as an administrator.
 1. In `appsettings.json`, set the value of **"LaserficheServerName"** to the fully qualified domain name of your Laserfiche Server in your network. If your Laserfiche Server is using a non-default port, append the port to the fully qualified domain name (e.g., "myLaserficheServer.myOrganization.com:123").
 1. Optional configuration settings
-    - (Optional) In `appsettings.json`, set the value of **"EnableLaserficheServerSSL"** to false if the connection to the Laserfiche server is **NOT** secured using TLS/SSL.
-    - (Optional) In `appsettings.json`, set the value of **"EnableGetRepositoryListApi"** to true if you would like to enable the GET /Repositories API that returns the list of repositories. **Note that using this API does not require an access token.**
-    - (Optional) In `appsettings.json`, set the value of **"KeyedConcurrentLicense"** to your "Keyed Concurrent License".
-    - (Optional) In `appsettings.json`, set the value of **"LaserficheWebClientHostUrl"** to your "Laserfiche Web Client Host URL" (e.g., "https://*{LaserficheWebClientHostName}*/laserfiche").
-    - (Optional) To modify the file upload (document import) size limit:
-        1. Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "web.config" using a text editor as an administrator. Change the value of **"maxAllowedContentLength"** in "&lt;requestLimits maxAllowedContentLength="104857600" /&gt;" to the desired value in **bytes**.
-        1. Do one of the following depending on the version of the Laserfiche API Server
-            - **Laserfiche API Server 1.1:** Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "microservice.json" using a text editor as an administrator. Change the value of **"UploadFileSizeLimitBytes"** under the "Operation" section to the desired value in **bytes**.
-            - **Laserfiche API Server 1.0:** Navigate to the directory "%ProgramData%\Laserfiche\API Server\LFRepositoryAPI" and **open** `appsettings.json` using a text editor as an administrator. Set the value of **"UploadFileSizeLimitMb"** to the desired value in **MB**.
-    - (Optional) To override the default log settings, navigate to the installation directory (e.g., "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and open "nlog.config" using a text editor as an administrator. For example, the last logging rule's "minLevel" can be increased to reduce trace logging.
+   - (Optional) In `appsettings.json`, set the value of **"EnableLaserficheServerSSL"** to false if the connection to the Laserfiche server is **NOT** secured using TLS/SSL.
+   - (Optional) In `appsettings.json`, set the value of **"EnableGetRepositoryListApi"** to true if you would like to enable the GET /Repositories API that returns the list of repositories. **Note that using this API does not require an access token.**
+   - (Optional) In `appsettings.json`, set the value of **"KeyedConcurrentLicense"** to your "Keyed Concurrent License".
+   - (Optional) In `appsettings.json`, set the value of **"LaserficheWebClientHostUrl"** to your "Laserfiche Web Client Host URL" (e.g., "https://_{LaserficheWebClientHostName}_/laserfiche").
+   - (Optional) To modify the file upload (document import) size limit:
+     1. Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "web.config" using a text editor as an administrator. Change the value of **"maxAllowedContentLength"** in "&lt;requestLimits maxAllowedContentLength="104857600" /&gt;" to the desired value in **bytes**.
+     1. Do one of the following depending on the version of the Laserfiche API Server
+        - **Laserfiche API Server 1.1:** Navigate to the Laserfiche API Server installation directory (by default, "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and **open** "microservice.json" using a text editor as an administrator. Change the value of **"UploadFileSizeLimitBytes"** under the "Operation" section to the desired value in **bytes**.
+        - **Laserfiche API Server 1.0:** Navigate to the directory "%ProgramData%\Laserfiche\API Server\LFRepositoryAPI" and **open** `appsettings.json` using a text editor as an administrator. Set the value of **"UploadFileSizeLimitMb"** to the desired value in **MB**.
+   - (Optional) To override the default log settings, navigate to the installation directory (e.g., "C:\Program Files\Laserfiche\API Server\LFRepositoryAPI") and open "nlog.config" using a text editor as an administrator. For example, the last logging rule's "minLevel" can be increased to reduce trace logging.
 1. **Save** `appsettings.json` and **restart** IIS Server.
 
 ### Verify your Installation
 
-To verify the Laserfiche API Server is running, navigate to the API Server Swagger page by opening IIS Manager and navigating to the website containing "LFRepositoryAPI" and click browse application. This should open the following page https://*{APIServerName}*/LFRepositoryAPI/swagger/index.html.
+To verify the Laserfiche API Server is running, navigate to the API Server Swagger page by opening IIS Manager and navigating to the website containing "LFRepositoryAPI" and click browse application. This should open the following page https://_{APIServerName}_/LFRepositoryAPI/swagger/index.html.
 
 ### Troubleshooting the Installation
 
@@ -70,7 +70,7 @@ To verify the Laserfiche API Server is running, navigate to the API Server Swagg
 - The username and password key-value pair can be a Laserfiche repository user, a Laserfiche Directory Server user, or a Windows domain user. When using a "Keyed Integration License", the password grant type is still used in association with a user account, but the allowed concurrent sessions will match those in the license.
 
 {: .note }
-**Note:** When authenticating with a Windows domain account, the API expects the username to be in either UPN format (**username@domain**) or down-level logon name format (**domain\username**). 
+**Note:** When authenticating with a Windows domain account, the API expects the username to be in either UPN format (**username@domain**) or down-level logon name format (**domain\username**).
 
 ```xml
 POST https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Token
@@ -80,9 +80,10 @@ grant_type=password&username={username}&password={password}
 ```
 
 {: .note }
-**Note:** You can make this request from the Swagger Playground. Navigate to the installed Laserfiche API Server Swagger Playground page: https://*{APIServerHostName}*/LFRepositoryAPI/swagger/index.html and expand the Token section to find the /Token API. Click the Try it out button and fill in the request parameters to send the request.
+**Note:** You can make this request from the Swagger Playground. Navigate to the installed Laserfiche API Server Swagger Playground page: https://_{APIServerHostName}_/LFRepositoryAPI/swagger/index.html and expand the Token section to find the /Token API. Click the Try it out button and fill in the request parameters to send the request.
 
 If successful, the API will return a 200 HTTP response status code and the response body will contain an access token.
+
 ```xml
 HTTP 200 OK
 {
@@ -107,4 +108,3 @@ Now you're ready to make any Laserfiche API call.
 ## Try out your installation with a sample application
 
 Try our [Sample Projects](../libraries/) to learn how to use our client libraries to access your self-hosted Laserfiche API Server.
-

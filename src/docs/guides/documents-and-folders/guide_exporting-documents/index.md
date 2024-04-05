@@ -3,19 +3,21 @@ layout: default
 title: Exporting Documents (V1)
 nav_order: 8
 redirect_from:
-    - guides/guide_exporting-documents.html
-    - guide_exporting-documents.html
+  - guides/guide_exporting-documents.html
+  - guide_exporting-documents.html
 parent: Repository Folders and Documents
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Export a Document
 
 Retrieving a document from the repository is a multi-step process that can be achieved using the following APIs.
 
 ## Get Header Information
+
 Before the export can begin, the client will need information about the file content and size. That information can be acquired through this HEAD request.
 
 {: .note }
@@ -54,7 +56,7 @@ Range: bytes=0-1000
 If the response is successful, it will return a 206 Partial Content HTTP response status code, with the requested byte range in the response body.
 
 {: .note }
-**Note:** If no `Range` header is specified in the request, then the API will attempt to return the entire document. If the document is larger than 50 MB, it is recommended that you use the `Range` header to split up the export of the document in 50 MB chunks. Requests with larger than 50 MB may run the risk of timing out. 
+**Note:** If no `Range` header is specified in the request, then the API will attempt to return the entire document. If the document is larger than 50 MB, it is recommended that you use the `Range` header to split up the export of the document in 50 MB chunks. Requests with larger than 50 MB may run the risk of timing out.
 
 {: .note }
 **Note:** The `Range` header only supports a single range of bytes. It does not support multiple ranges at a time.

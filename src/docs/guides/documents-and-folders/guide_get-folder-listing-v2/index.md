@@ -3,13 +3,13 @@ layout: default
 title: Get Folder Contents (V2)
 nav_order: 3
 redirect_from:
-   - /guides/v2/guide_get-folder-listing-v2.html
+  - /guides/v2/guide_get-folder-listing-v2.html
 parent: Repository Folders and Documents
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
-      
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Get Folder Contents (V2)
 
@@ -34,7 +34,7 @@ There is no request body for this API since it is a GET request.
 GET https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/54/Folder/Children
 ```
 
-  - The entry ID `54` in the request URL represents the ID of the folder we want to retrieve its content, in this case, the "Invoices" folder.
+- The entry ID `54` in the request URL represents the ID of the folder we want to retrieve its content, in this case, the "Invoices" folder.
 
 A successful request will return a 200 HTTP response status code with the following response body (truncated for the sake of space).
 
@@ -84,8 +84,8 @@ HTTP 200 OK
 }
 ```
 
-  - The `@odata.context` property (and similarly the `@odata.type` property) in the response body represents the URL of the OData data model for the returned entity. This is an implementation detail of OData, and can be ignored for functional purposes of the API.
-  - The `value` property in the response body is an array of JSON objects, each representing an entry in the folder listing.
+- The `@odata.context` property (and similarly the `@odata.type` property) in the response body represents the URL of the OData data model for the returned entity. This is an implementation detail of OData, and can be ignored for functional purposes of the API.
+- The `value` property in the response body is an array of JSON objects, each representing an entry in the folder listing.
 
 ## Retrieve Field Metadata for each Document
 
@@ -244,7 +244,7 @@ HTTP 200 OK
 
 Different properties are supported for different entry types. Note that you may include multiple properties, in a comma-separated format, in the `$select` OData query parameter.
 
-Here is the list of default properties that can apply to *all entry types*. Note that when the `$select` OData query parameter is not used, all of these properties are returned by default.
+Here is the list of default properties that can apply to _all entry types_. Note that when the `$select` OData query parameter is not used, all of these properties are returned by default.
 
 | --- |
 | `id` |
@@ -263,7 +263,7 @@ Here is the list of default properties that can apply to *all entry types*. Note
 | `isContainer` |
 | `isLeaf` |
 
-Here is the list of properties specific to the *Document* entry type that you can `$select` on.
+Here is the list of properties specific to the _Document_ entry type that you can `$select` on.
 
 | --- |
 | `extension` |
@@ -275,16 +275,16 @@ Here is the list of properties specific to the *Document* entry type that you ca
 | `isCheckedOut` |
 | `isUnderVersionControl` |
 
-Here is the list of properties specific to the *Shortcut* entry type that you can `$select` on.
+Here is the list of properties specific to the _Shortcut_ entry type that you can `$select` on.
 
 | --- |
-| `extension` (of the shortcut target) | 
+| `extension` (of the shortcut target) |
 | `targetType` (entry type of the shortcut target) |
 | `targetId` (entry Id of the shortcut target) |
 | `isRecordFolder` (if the shortcut target is a record folder) |
 
-Here is the list of properties specific to the *Folder* entry type that you can `$select` on.
+Here is the list of properties specific to the _Folder_ entry type that you can `$select` on.
 
 | --- |
-| `isRecordFolder` | 
-| `isUnderRecordSeries` |  
+| `isRecordFolder` |
+| `isUnderRecordSeries` |

@@ -3,23 +3,22 @@ layout: default
 title: Get Dynamic Field Values (V2)
 nav_order: 9
 redirect_from:
-   - /guides/v2/guide_get-dynamic-field-logic-values-v2.html
+  - /guides/v2/guide_get-dynamic-field-logic-values-v2.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
-      
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
+
 # Get Dynamic Field Logic Values (V2)
 
 {: .note }
 To see the guide for V1, click [here](../guide_get-dynamic-field-logic-values/).
 
-
-Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Dynamic-Fields.htm) in Laserfiche in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a *parent* field determines what value are available in the *child* fields. Dynamic fields can contain multiple levels (for instance, only displaying the available model numbers for a particular model once the Model field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of manufacturer and model).
+Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Dynamic-Fields.htm) in Laserfiche in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a _parent_ field determines what value are available in the _child_ fields. Dynamic fields can contain multiple levels (for instance, only displaying the available model numbers for a particular model once the Model field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of manufacturer and model).
 
 **Request Overview**
-
 
 {: .note }
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Fields/GetDynamicFieldLogicValue
@@ -55,4 +54,4 @@ HTTP 200 Ok
 }
 ```
 
-Note that independent fields and non-dynamic fields in the request will be ignored. The response will only return related dynamic field value logic values for the given template. The API does not require that the given entry has the template with the dynamic field assigned. However, in order to avoid situations where the user does not have read access to certain entries, the *entryId* in the path should be set to entry currently being worked on or the parent folder in the case of importing a new document.
+Note that independent fields and non-dynamic fields in the request will be ignored. The response will only return related dynamic field value logic values for the given template. The API does not require that the given entry has the template with the dynamic field assigned. However, in order to avoid situations where the user does not have read access to certain entries, the _entryId_ in the path should be set to entry currently being worked on or the parent folder in the case of importing a new document.

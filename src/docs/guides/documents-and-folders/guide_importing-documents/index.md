@@ -3,13 +3,14 @@ layout: default
 title: Import Documents (V1)
 nav_order: 6
 redirect_from:
-    - guides/guide_importing-documents.html
-    - guide_importing-documents.html
+  - guides/guide_importing-documents.html
+  - guide_importing-documents.html
 grand_parent: Guides
 parent: Repository Folders and Documents
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Importing a Document using the Laserfiche API
 
@@ -98,51 +99,57 @@ HTTP 201 Created
 ## Import a Document using Postman
 
 The Laserfiche API import can be made from the Postman tool.`
+
 1. **Download** and **install** Postman.
 1. **Open** Postman and select the option to **Import** a request.
 1. Select the option to import **Raw Text** and paste the below curl command.
 
-    - ```xml
-    curl --location --request POST 'https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{parentfolderid}/{documentName}?autoRename=true' \
-    --header 'Authorization: Bearer {accessToken}' \
-    --form 'electronicDocument=@"{filePath}"' \
-    --form 'request="{
-    \"template\": \"Email\",
-    \"metadata\": {
-        \"fields\": {
-        \"Sender\": {
-            \"values\": [
-            {
-                \"value\": \"sender@laserfiche.com\",
-                \"position\": 1
-            }
-            ]
-        },
-        \"Recipients\": {
-            \"values\": [
-            {
-                \"value\": \"recipient@laserfiche.com\",
-                \"position\": 1
-            }
-            ]
-        }
-        }
-    }
-    }"'
-    ```
+   - ```xml
+     curl --location --request POST 'https://api.laserfiche.com/repository/v1/Repositories/{repositoryId}/Entries/{parentfolderid}/{documentName}?autoRename=true' \
+     --header 'Authorization: Bearer {accessToken}' \
+     --form 'electronicDocument=@"{filePath}"' \
+     --form 'request="{
+     \"template\": \"Email\",
+     \"metadata\": {
+         \"fields\": {
+         \"Sender\": {
+             \"values\": [
+             {
+                 \"value\": \"sender@laserfiche.com\",
+                 \"position\": 1
+             }
+             ]
+         },
+         \"Recipients\": {
+             \"values\": [
+             {
+                 \"value\": \"recipient@laserfiche.com\",
+                 \"position\": 1
+             }
+             ]
+         }
+         }
+     }
+     }"'
+     ```
+
+   ```
+
+   ```
 
 1. After importing the request to Postman, the following request details will need to be updated:
-    - The hostname in the request URL may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc, depending on the data center your Laserfiche Cloud repository resides in. If using a self-hosted Laserfiche API Server, the request URL needs to be updated to `https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Entries/{parentFolderId}/{documentName}?autoRename=true`.
-    - The `{repositoryId}` in the request URL is your **Laserfiche repository ID**.
-    - The `{parentFolderId}` in the request URL is the **Laserfiche entry ID** of the folder the file will be imported to.
-    - The `{documentName}` in the request URL is the **filename** when imported to the Laserfiche repository.
-    - The `{accessToken}` in the Authorization request header is a valid [access token](../../../api/authentication/guide_authenticate-to-the-laserfiche-api).
-    - The `electronicDocument` in the request body can be **selected** using the file picker.
-    - As an example, the `request` in the request body assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository.
+   - The hostname in the request URL may need to be updated to `api.laserfiche.ca`, `api.eu.laserfiche.com`, etc, depending on the data center your Laserfiche Cloud repository resides in. If using a self-hosted Laserfiche API Server, the request URL needs to be updated to `https://{APIServerHostName}/LFRepositoryAPI/v1/Repositories/{repositoryId}/Entries/{parentFolderId}/{documentName}?autoRename=true`.
+   - The `{repositoryId}` in the request URL is your **Laserfiche repository ID**.
+   - The `{parentFolderId}` in the request URL is the **Laserfiche entry ID** of the folder the file will be imported to.
+   - The `{documentName}` in the request URL is the **filename** when imported to the Laserfiche repository.
+   - The `{accessToken}` in the Authorization request header is a valid [access token](../../../api/authentication/guide_authenticate-to-the-laserfiche-api).
+   - The `electronicDocument` in the request body can be **selected** using the file picker.
+   - As an example, the `request` in the request body assigns the `Email` template and the `Sender` and `Recipients` fields to the imported file. The metadata may need to be updated if the template and field definitions do not exist in the Laserfiche repository.
 1. **Send** the request to import a document. If an error occurs, verify that:
-    - The user or service principal associated with the access token has access to the repository and has the right to import to the selected folder.
-    - The template and field definitions being assigned to the entry exist in the repository. Alternatively, send a request without assigning any metadata by setting the `request` in the request body to `{}`.
-    - If a 403 Forbidden HTTP response status code is returned, the access token may need the "repository.Write" scope. See [OAuth 2.0 Scopes for Laserfiche APIs](../../../api/authentication/guide_oauth_2.0_scopes/) for more details.
+   - The user or service principal associated with the access token has access to the repository and has the right to import to the selected folder.
+   - The template and field definitions being assigned to the entry exist in the repository. Alternatively, send a request without assigning any metadata by setting the `request` in the request body to `{}`.
+   - If a 403 Forbidden HTTP response status code is returned, the access token may need the "repository.Write" scope. See [OAuth 2.0 Scopes for Laserfiche APIs](../../../api/authentication/guide_oauth_2.0_scopes/) for more details.
 
 ## Next Steps
+
 - Check out how to [import a document with low-code tools](../../../getting-started/guide_low-code-tools-v1/).

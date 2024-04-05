@@ -9,8 +9,8 @@ parent: Authentication
 grand_parent: API
 ---
 
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # OAuth 2.0 Scopes for Laserfiche APIs
 
@@ -31,6 +31,7 @@ An application should be designed to provide useful limited functionality when o
 ### Configure Pre-Approved Scopes in the Developer Console
 
 Before an app can request an access token with scopes, a Developer Console Administrator must first pre-approve the scopes that can be requested. This is to ensure the app cannot request unapproved scopes and be granted inappropriate access to Laserfiche resources.
+
 1. Sign in to the [Developer Console](../../../getting-started/developer-console/).
 1. In the Applications listing, select the app you want to configure.
 1. On the **App Configuration** page, select the **Authentication** tab.
@@ -50,9 +51,9 @@ See the following lists of available OAuth 2.0 scopes.
 
 ### Repository API
 
-| Scopes | Description |
-| --- | --- |
-| repository.Read | Allows the app to read the content of Laserfiche repositories on behalf of the signed-in user. |
+| Scopes           | Description                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------ |
+| repository.Read  | Allows the app to read the content of Laserfiche repositories on behalf of the signed-in user.   |
 | repository.Write | Allows the app to modify the content of Laserfiche repositories on behalf of the signed-in user. |
 
 {: .note }
@@ -64,21 +65,21 @@ An application can request more granular scopes than the ones pre-approved in th
 
 1. `repository` is a constant string representing any version of the Repository API (for example, `https://api.laserfiche.com/repository/v1`).
 1. Optionally, a resource path can be appended to it. This resource path represents the REST API URI section that the client is allowed to access.
-1. The string after the "." separator represents which access rights are allowed. Access rights must be concatenated with no space in between and start with an upper case letter, for example, *Read*, *Write*, or a combination such as *ReadWrite*. An app can only access the repository APIs with access rights that match the ones defined in the granted scope(s).
+1. The string after the "." separator represents which access rights are allowed. Access rights must be concatenated with no space in between and start with an upper case letter, for example, _Read_, _Write_, or a combination such as _ReadWrite_. An app can only access the repository APIs with access rights that match the ones defined in the granted scope(s).
 
 Examples of Repository API granular scopes
 
-| Scopes | Allowed Requests Examples | API Description |
-| --- | --- | --- |
-|  | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1 | Get entry 1 |
-| repository/Repositories/r-abc123/Entries/1.Read | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/fields | Get fields assigned to entry 1 |
-|  | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/Laserfiche.Repository.Folder/children | Get children entries in entry 1 |
+| Scopes                                          | Allowed Requests Examples                                                                                          | API Description                 |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
+|                                                 | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1                                       | Get entry 1                     |
+| repository/Repositories/r-abc123/Entries/1.Read | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/fields                                | Get fields assigned to entry 1  |
+|                                                 | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/Laserfiche.Repository.Folder/children | Get children entries in entry 1 |
 
 ### (Preview) Table API
 
-| Scopes | Description |
-| --- | --- |
-| table.Read | Allows the app to read the content of Laserfiche lookup tables on behalf of the signed-in user. |
+| Scopes      | Description                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------- |
+| table.Read  | Allows the app to read the content of Laserfiche lookup tables on behalf of the signed-in user.   |
 | table.Write | Allows the app to modify the content of Laserfiche lookup tables on behalf of the signed-in user. |
 
 {: .note }
@@ -90,15 +91,14 @@ An application can request more granular scopes than the ones pre-approved in th
 
 1. `odata4/table` is a constant string representing the Table API.
 1. Optionally, a table name can be appended to it. This table name represents the table that the client is allowed to access.
-1. The string after the "." separator represents which access rights are allowed. Access rights must be concatenated with no space in between and start with an upper case letter, for example, *Read*, *Write*, or a combination such as *ReadWrite*.
-    - An app can only access the table APIs with access rights that match the ones defined in the granted scope(s).
+1. The string after the "." separator represents which access rights are allowed. Access rights must be concatenated with no space in between and start with an upper case letter, for example, _Read_, _Write_, or a combination such as _ReadWrite_.
+   - An app can only access the table APIs with access rights that match the ones defined in the granted scope(s).
 
 Examples of Table API granular scopes
 
-| Scopes | Allowed Requests Examples | API Description |
-| --- | --- | --- |
+| Scopes                         | Allowed Requests Examples                                | API Description               |
+| ------------------------------ | -------------------------------------------------------- | ----------------------------- |
 | odata4/table/MyTable('1').Read | GET https://api.laserfiche.com/odata4/table/MyTable('1') | Get row with key 1 in MyTable |
-
 
 The OAuth scope required to access each API is documented on the [Swagger Playground](https://developer.laserfiche.com/api/playground.html).
 

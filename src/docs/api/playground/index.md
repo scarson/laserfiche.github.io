@@ -3,22 +3,22 @@ layout: default
 title: Swagger Playground
 nav_order: 3
 redirect_from:
-    - api/API.html
-    - api/playground.html
+  - api/API.html
+  - api/playground.html
 parent: API
 ---
 
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Laserfiche REST Swagger Playground
 
 The Laserfiche REST API provides programmatic access to Laserfiche services for Cloud and [Self-Hosted/api/server/index.html Laserfiche instances.
 
-
 ### Laserfiche API Client Core
 
 The Laserfiche API Client Core library implements various foundational APIs for working with Laserfiche, including authorization APIs such as OAuth 2.0 flows for secure access to other Laserfiche APIs.
+
 - [Try the OAuth API](https://signin.laserfiche.com/oauth/swagger/index.html) (United States Data Center)
 - [Try the OAuth API](https://signin.laserfiche.ca/oauth/swagger/index.html) (Canadian Data Center)
 - [Try the OAuth API](https://signin.eu.laserfiche.com/oauth/swagger/index.html) (European Data Center)

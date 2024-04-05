@@ -3,12 +3,13 @@ layout: default
 title: Write Field Values (V2)
 nav_order: 3
 redirect_from:
-   - /guides/v2/guide_write-field-values-v2.html
+  - /guides/v2/guide_write-field-values-v2.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
-<!--Copyright (c) Laserfiche.
-See LICENSE and LICENSE-CODE in the project root for license information.-->
+
+<!--© 2024 Laserfiche.
+See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Write Field Values (V2)
 
@@ -59,11 +60,13 @@ PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/12345
 ```
 
 {: .note}
-  - **Note:**
-  - If there are other fields with existing values assigned to the entry, your request body must include the existing values or else the update will clear out values not included in the request.
-  - For the **Date**, the value should not contain any time zone information. Datetime values are stored as-is in the repository. If the value contains any time zone offset information like "Z" or "+08:00", the request will be rejected.
+
+- **Note:**
+- If there are other fields with existing values assigned to the entry, your request body must include the existing values or else the update will clear out values not included in the request.
+- For the **Date**, the value should not contain any time zone information. Datetime values are stored as-is in the repository. If the value contains any time zone offset information like "Z" or "+08:00", the request will be rejected.
 
 This call will return a response containing a list of all the fields and their values after the update.
+
 ```xml
 HTTP 200 Ok
 {
