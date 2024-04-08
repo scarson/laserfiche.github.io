@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Search vs. Simple Search (V2)
+title: Search vs. Simple Search
 nav_order: 1
 redirect_from:
   - /guides/v2/guide_search-vs-simple-search-v2.html
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Search vs. Simple Search (V2)
+# Search vs. Simple Search
 
 {: .note }
 To see the guide for V1, click [here](../guide_search-vs-simple-search/).

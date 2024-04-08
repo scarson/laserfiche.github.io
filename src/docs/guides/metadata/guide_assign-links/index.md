@@ -1,12 +1,10 @@
 ---
 layout: default
 title: Assign Links (V1)
-nav_order: 8
+nav_exclude: true
 redirect_from:
   - guides/guide_assign-links.html
   - guide_assign-links.html
-parent: Repository Metadata
-grand_parent: Guides
 ---
 
 <!--© 2024 Laserfiche.

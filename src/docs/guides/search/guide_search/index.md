@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Search (V1)
-nav_order: 4
+nav_exclude: true
 redirect_from:
   - guides/guide_search.html
   - guide_search.html
@@ -12,7 +12,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Search
+# Search (V1)
 
 Use the search API to find entries in your Laserfiche Cloud repository.
 

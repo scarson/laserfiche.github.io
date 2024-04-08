@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Get Folder Contents (V1)
-nav_order: 4
+nav_exclude: true
 redirect_from:
   - guides/guide_get-folder-listing.html
   - guide_get-folder-listing.html
-grand_parent: Guides
-parent: Repository Folders and Documents
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Retrieving the Contents of a Folder
+# Retrieving the Contents of a Folder (V1)
 
 Folders are the basis for organizing all of the content in your repository. In this guide, we will review how to retrieve the contents of a folder. The following GET API is used to return the list of entries of a specified folder.
 

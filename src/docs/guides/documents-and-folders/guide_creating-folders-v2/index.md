@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Create Folder (V2)
+title: Create Folders
 nav_order: 1
 redirect_from:
   - /guides/v2/guide_creating-folders-v2.html
 parent: Repository Folders and Documents
 grand_parent: Guides
-has_children: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Create Folder (V2)
+# Create Folders
 
 {: .note }
 To see the guide for V1, click [here](../guide_creating-folders/).

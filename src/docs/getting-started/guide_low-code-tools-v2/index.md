@@ -5,13 +5,12 @@ nav_order: 4
 redirect_from:
   - /guides/v2/guide_low-code-tools-v2.html
 parent: Getting Started
-has_children: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Using the Laserfiche API with Low-Code Tools (V2)
+# Using the Laserfiche API with Low-Code Tools
 
 {: .note }
 To see the guide for V1, click [here](../guide_low-code-tools-v1/).

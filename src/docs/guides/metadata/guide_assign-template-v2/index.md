@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Assign Template (V2)
+title: Assign Templates
 nav_order: 1
 redirect_from:
   - /guides/v2/guide_assign-template-v2.html
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Assign Template (V2)
+# Assign Templates
 
 {: .note }
 To see the guide for V1, click [here](../guide_assign-template/).

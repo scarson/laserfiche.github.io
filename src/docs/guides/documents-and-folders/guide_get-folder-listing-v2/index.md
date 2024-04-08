@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Get Folder Contents (V2)
-nav_order: 3
+title: Get Folder Contents
+nav_order: 2
 redirect_from:
   - /guides/v2/guide_get-folder-listing-v2.html
 parent: Repository Folders and Documents
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Get Folder Contents (V2)
+# Get Folder Contents
 
 {: .note }
 To see the guide for V1, click [here](../guide_get-folder-listing/).

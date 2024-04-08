@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Search vs. Simple Search (V1)
-nav_order: 2
+nav_exclude: true
 redirect_from:
   - guides/guide_search-vs-simple-search.html
   - guide_search-vs-simple-search.html
-parent: Repository Search
-grand_parent: Guides
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# When to Use Search VS Simple Search
+# When to Use Search VS Simple Search (V1)
 
 The Laserfiche API supports two search APIs, each optimized for different use cases.
 

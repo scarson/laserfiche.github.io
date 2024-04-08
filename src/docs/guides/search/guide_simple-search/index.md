@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Simple Search (V1)
-nav_order: 6
+nav_exclude: true
 redirect_from:
   - guides/guide_simple-search.html
   - guide_simple-search.html
-parent: Repository Search
-grand_parent: Guides
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Simple Search
+# Simple Search (V1)
 
 The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](../guide_search-vs-simple-search/).
 

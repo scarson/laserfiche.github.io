@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Import Documents (V1)
-nav_order: 6
+nav_exclude: true
 redirect_from:
   - guides/guide_importing-documents.html
   - guide_importing-documents.html
-grand_parent: Guides
-parent: Repository Folders and Documents
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Importing a Document using the Laserfiche API
+# Importing a Document using the Laserfiche API (V1)
 
 Documents, folders, and shortcuts are collectively referred to as entries in Laserfiche. Documents are the basic building block of a Laserfiche repository. Create a document with the Laserfiche API by using the following multipart/form POST request.`
 

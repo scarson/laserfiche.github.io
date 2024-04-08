@@ -1,18 +1,16 @@
 ---
 layout: default
 title: Exporting Documents (V1)
-nav_order: 8
 redirect_from:
   - guides/guide_exporting-documents.html
   - guide_exporting-documents.html
-parent: Repository Folders and Documents
-grand_parent: Guides
+nav_exclude: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Export a Document
+# Export Documents (V1)
 
 Retrieving a document from the repository is a multi-step process that can be achieved using the following APIs.
 

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Assign Tags (V2)
-nav_order: 5
+title: Assign Tags
+nav_order: 3
 redirect_from:
   - /guides/v2/guide_assign-tag-v2.html
 parent: Repository Metadata
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Assign Tags (V2)
+# Assign Tags
 
 {: .note}
 To see the guide for V1, click [here](../guide_assign-tag/).

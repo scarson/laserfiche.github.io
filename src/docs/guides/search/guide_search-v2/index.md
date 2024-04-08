@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Search (V2)
-nav_order: 3
+title: Search
+nav_order: 2
 redirect_from:
   - /guides/v2/guide_search-v2.html
 parent: Repository Search
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Search (V2)
+# Search
 
 {: .note }
 To see the guide for V1, click [here](../guide_search/).

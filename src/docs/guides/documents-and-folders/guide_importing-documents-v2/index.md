@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Import Document (V2)
-nav_order: 5
+title: Import Documents
+nav_order: 3
 redirect_from:
   - /guides/v2/guide_importing-documents-v2.html
   - /guide_importing-documents-v2.html
@@ -12,7 +12,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Import Document (V2)
+# Import Documents
 
 {: .note }
 To see the guide for V1, click [here](../guide_importing-documents/)

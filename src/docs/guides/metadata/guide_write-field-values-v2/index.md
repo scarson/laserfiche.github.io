@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Write Field Values (V2)
-nav_order: 3
+title: Write Field Values
+nav_order: 2
 redirect_from:
   - /guides/v2/guide_write-field-values-v2.html
 parent: Repository Metadata
@@ -11,7 +11,7 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Write Field Values (V2)
+# Write Field Values
 
 {: .note }
 To see the guide for V1, click [here](../guide_write-field-values/).

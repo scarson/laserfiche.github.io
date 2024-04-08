@@ -5,13 +5,12 @@ nav_order: 3
 redirect_from:
   - /guides/v2/guide_long-operations-v2.html
 parent: Getting Started
-has_children: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Repository Long Operations (V2)
+# Repository Long Operations
 
 {: .note }
 To see the guide for V1, click [here](../guide_long-operations-v1/).
