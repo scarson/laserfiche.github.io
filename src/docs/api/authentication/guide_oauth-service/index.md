@@ -39,15 +39,15 @@ Create an OAuth Service App when you want to write a service application that ma
    - Choose create a public **access key** if the service app uses the [Laserfiche API client libraries](../../libraries/) or is capable of generating an HMAC client credential. Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to generate an HMAC client credential and request an access token.
    - Choose create a long-lasting **authorization key** if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v1/) that require a static secret to connect to Laserfiche APIs. Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to obtain your token. You can skip the first section for generating an HMAC credential since the authorization key can be used directly with the token service.
      - Creating an **authorization key** requires entering a valid service principal key for the selected service principal
-     - {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
-   - Choose create a **username and password** if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API. Once generated, you can skip the next step for generating OAuth credentials section below and go directly to **Use the credentials to access Laserfiche APIs**.
+       {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
+   - Choose create a **username and password** if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API. Once generated, you can skip the next step for generating OAuth credentials section below and go directly to the [Use the credentials to access Laserfiche APIs](#use-the-credentials-to-access-laserfiche-apis).
      - Creating an **username and password** a valid service principal key for the selected service principal
-     - {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
+       {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
      - To create a **username and password** you must specify requested scopes. This is required for the username and password at this step since you do not have the additional step of requesting an access token, which is where this will be specified for the other applications. This should fall within the allowed scopes of your application, the acess token will return the intersection of the allowed and requested scopes.
 
 1. When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
 
-   - {: .note } **Note:** Access keys should be securely stored.
+   {: .note } **Note:** Access keys should be securely stored.
 
 ## OAuth Client Credentials Grant Flow
 
@@ -103,7 +103,7 @@ The JWT will also need to be signed by the **access key**. See the links below f
           }
         ```
 
-    - {: .note } For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
+    {: .note } For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
 
     - On failure, the OAuth service will return an error response.
 
@@ -130,7 +130,7 @@ Error types include:
 - **invalid_client:** The client authentication is missing or the client_id is invalid.
 - **unauthorized_client:** The application type is not Service. Or the application does not have a valid service principal.
 
-## Use the credentials to access the Laserfiche API
+## Use the credentials to access Laserfiche APIs
 
 - Using an OAuth Access Token (generated from OAuth Credentials Flow)
 
