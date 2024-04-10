@@ -11,6 +11,9 @@ nav_exclude: true
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Export Documents (V1)
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_exporting-documents-v2/).</sup>
 
 Retrieving a document from the repository is a multi-step process that can be achieved using the following APIs.
 

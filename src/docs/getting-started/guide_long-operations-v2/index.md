@@ -11,7 +11,9 @@ parent: Getting Started
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Repository Long Operations
-
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_long-operations-v1/).</sup>
 {: .note }
 To see the guide for V1, click [here](../guide_long-operations-v1/).
 

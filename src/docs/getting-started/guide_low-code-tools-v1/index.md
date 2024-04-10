@@ -11,6 +11,9 @@ nav_exclude: true
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Using the Laserfiche API with Low-Code Tools (V1)
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_low-code-tools-v2/).</sup>
 
 Use the Laserfiche API to access Laserfiche from low-code tools. This guide will demonstrate how to import a document into Laserfiche with Microsoft Power Automate. Other low-code tools may follow a similar model.
 
