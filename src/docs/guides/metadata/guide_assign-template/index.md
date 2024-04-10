@@ -1,19 +1,20 @@
 ---
 layout: default
-title: Assign Templates (V1)
-nav_exclude: true
+title: Assign Templates
+nav_order: 1
 redirect_from:
-  - guides/guide_assign-template.html
-  - guide_assign-template.html
+  - /guides/v2/guide_assign-template-v2.html
+parent: Repository Metadata
+grand_parent: Guides
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Templates
-**Applies to**: Repository API v1.
+**Applies to**: Repository API v2.
 <br/>
-<sup>[See Repository API v2](../guide_assign-template-v2/).</sup>
+<sup>[See Repository API v1](../guide_assign-template-v1/).</sup>
 
 Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Fields_and_Templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
 
@@ -22,44 +23,36 @@ A field contains a piece of information about a document, such as an author name
 **Request Overview**
 
 {: .note }
-PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/template
+PUT https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Template
 
 The example request assigns the **Email** template to the entry with entry ID **12345**. It also assigns values to the **Sender**, **Recipients**, and **Subject** fields in the template. In this example, **Recipients** is a multi-value field and we can assign more than one value.
 
 ```xml
-PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/template
+PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/12345/Template
 {
-  "templateName":"Email",
-  "fields":{
-    "Sender":{
-      "values":[
-        {
-          "value":"sender@laserfiche.com",
-          "position":1
-        }
+  "templateName": "Email",
+  "fields": [
+    {
+      "name": "Sender",
+      "values": [
+        "sender@laserfiche.com"
       ]
     },
-    "Recipients":{
+    {
+      "name": "Recipients",
       "values": [
-        {
-          "value":"recipient1@laserfiche.com",
-          "position":1
-        },
-        {
-          "value": "recipient2@laserfiche.com",
-          "position": 2
-        }
+        "recipient1@laserfiche.com",
+        "recipient2@laserfiche.com",
+        "recipient3@laserfiche.com"
       ]
     },
-    "Subject": {
+    {
+      "name": "Subject",
       "values": [
-        {
-          "value":"Sample Subject field value",
-          "position":1
-        }
+        "Sample Subject field value"
       ]
     }
-  }
+  ]
 }
 ```
 
@@ -68,14 +61,18 @@ A successful return response will include the updated entry with assigned templa
 ```xml
 HTTP 200 Ok
 {
-  "id":12345,
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.Entry",
+  "@odata.type": "#Laserfiche.Repository.Document",
+  "id": 12345,
+  "isContainer": false,
+  "isLeaf": true,
   "name": "Sample Document Name",
   "parentId": 1,
   "fullPath": "\\Sample Document Name",
   "folderPath": "\\",
-  "creator": "SampleUserName (r-abc123)",
-  "creationTime": "2021-02-02T04:41:16Z",
-  "lastModifiedTime": "2021-02-08T16:05:05Z",
+  "creator": "Guide User",
+  "creationTime": "2023-09-01T19:11:22Z",
+  "lastModifiedTime": "2023-09-08T13:40:02Z",
   "entryType": "Document",
   "templateName": "Email",
   "templateId": 1,
@@ -92,13 +89,12 @@ HTTP 200 Ok
     "Comments"
   ],
   "volumeName": "DEFAULT000000",
-  "rowNumber": 0,
-  "elecDocumentSize": 210494,
+  "electronicDocumentSize": 125815645,
   "extension": "pdf",
   "isElectronicDocument": true,
   "isRecord": false,
-  "mimeType": null,
-  "pageCount": 0,
+  "mimeType": "application/pdf",
+  "pageCount": 16,
   "isCheckedOut": false,
   "isUnderVersionControl": false
 }
@@ -107,35 +103,25 @@ HTTP 200 Ok
 In the next example, we will assign a template that has a multi-value field group. The example request assigns the **Shopping List** template to the entry with entry ID **12345**. This template has two fields, **Item** and **Price**, and both fields are in a multi-value field group. In this example, we will assign the template and create two field groups. Matching position values are used to determine which values are grouped together in the field group.
 
 ```xml
-PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/template
+PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/12345/Template
 {
   "templateName": "Shopping List",
-  "fields": {
-    "Item": {
+  "fields": [
+    {
+      "name": "Item",
       "values": [
-        {
-          "value": "Apple",
-          "position": 1
-        },
-        {
-          "value": "Banana",
-          "position": 2
-        }
+        "Apple",
+        "Banana"
       ]
     },
-    "Price": {
+    {
+      "name": "Price",
       "values": [
-        {
-          "value": "1.99",
-          "position": 1
-        },
-        {
-          "value": "2.50",
-          "position": 2
-        }
+        "1.99",
+        "2.50"
       ]
     }
-  }
+  ]
 }
 ```
 
@@ -144,12 +130,16 @@ A successful return response will include the updated entry with assigned templa
 ```xml
 HTTP 200 Ok
 {
-  "id":12345,
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Laserfiche.Repository.Entry",
+  "@odata.type": "#Laserfiche.Repository.Document",
+  "id": 12345,
+  "isContainer": false,
+  "isLeaf": true,
   "name": "Sample Document Name",
   "parentId": 1,
   "fullPath": "\\Sample Document Name",
   "folderPath": "\\",
-  "creator": "SampleUserName (r-abc123)",
+  "creator": "Guide User",
   "creationTime": "2021-02-02T04:41:16Z",
   "lastModifiedTime": "2021-02-08T16:05:05Z",
   "entryType": "Document",
@@ -160,13 +150,12 @@ HTTP 200 Ok
     "Price"
   ],
   "volumeName": "DEFAULT000000",
-  "rowNumber": 0,
-  "elecDocumentSize": 210494,
+  "electronicDocumentSize": 210494,
   "extension": "pdf",
   "isElectronicDocument": true,
   "isRecord": false,
-  "mimeType": null,
-  "pageCount": 0,
+  "mimeType": "application/pdf",
+  "pageCount": 12,
   "isCheckedOut": false,
   "isUnderVersionControl": false
 }
