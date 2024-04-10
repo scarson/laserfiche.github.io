@@ -10,7 +10,10 @@ redirect_from:
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Importing a Document using the Laserfiche API (V1)
+# Importing a Document using the Laserfiche API
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_importing-documents-v2/).</sup>
 
 Documents, folders, and shortcuts are collectively referred to as entries in Laserfiche. Documents are the basic building block of a Laserfiche repository. Create a document with the Laserfiche API by using the following multipart/form POST request.`
 

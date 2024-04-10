@@ -12,9 +12,9 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Links
-
-{: .note }
-To see the guide for V1, click [here](../guide_assign-links/).
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_assign-links/).</sup>
 
 [Links](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
 

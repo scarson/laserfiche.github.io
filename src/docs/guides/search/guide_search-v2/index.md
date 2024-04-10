@@ -12,9 +12,9 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Search
-
-{: .note }
-To see the guide for V1, click [here](../guide_search/).
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_search/).</sup>
 
 Use the search API to find entries in your Laserfiche Cloud repository.
 A search operation follows the [long operation](../../../getting-started/guide_long-operations-v2/) pattern:

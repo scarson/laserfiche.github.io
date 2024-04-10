@@ -12,9 +12,9 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Simple Search
-
-{: .note }
-To see the guide for V1, click [here](../guide_simple-search/).
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_simple-search/).</sup>
 
 The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. See [this guide](../guide_search-vs-simple-search-v2/) to view the differences between simple search and search.
 

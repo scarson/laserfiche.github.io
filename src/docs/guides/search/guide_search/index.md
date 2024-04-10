@@ -12,7 +12,10 @@ grand_parent: Guides
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Search (V1)
+# Search
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_search-v2/).</sup>
 
 Use the search API to find entries in your Laserfiche Cloud repository.
 

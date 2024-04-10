@@ -10,7 +10,10 @@ redirect_from:
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Assign Links (V1)
+# Assign Links
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_assign-links-v2/).</sup>
 
 Links are a [metadata type](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) in Laserfiche that allows you to connect two related documents or folders, such as an email and a document.
 

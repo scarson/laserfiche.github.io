@@ -10,7 +10,10 @@ redirect_from:
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Assign Tags (V1)
+# Assign Tags
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_assign-tag-v2/).</sup>
 
 Tags are a [metadata type](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Tags.htm) in Laserfiche that provide a way to categorize documents and folders. You can use tags to indicate information such as the entry's status, contents, or handling instructions, or to specify that certain documents should be restricted to certain users. Tag information is stored with the document.
 

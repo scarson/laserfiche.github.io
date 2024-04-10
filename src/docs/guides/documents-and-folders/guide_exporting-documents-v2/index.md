@@ -13,9 +13,9 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Export Documents
-
-{: .note }
-To see the guide for V1, click [here](../guide_exporting-documents/)
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_exporting-documents/).</sup>
 
 Laserfiche API V2 provides two types of APIs for retrieving a document from the repository:
 

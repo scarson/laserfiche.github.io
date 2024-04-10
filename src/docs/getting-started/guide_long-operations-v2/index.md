@@ -14,8 +14,6 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 **Applies to**: Repository API v2.
 <br/>
 <sup>[See Repository API v1](../guide_long-operations-v1/).</sup>
-{: .note }
-To see the guide for V1, click [here](../guide_long-operations-v1/).
 
 Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API follows the [Asynchronous Request-Reply](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply) pattern, where the call will return a _task ID_ representing the work of the request. Client applications can then use this task ID to retrieve the status of the operation and the completed result of the action.
 

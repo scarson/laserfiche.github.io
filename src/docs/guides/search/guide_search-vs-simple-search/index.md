@@ -10,7 +10,10 @@ redirect_from:
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# When to Use Search VS Simple Search (V1)
+# When to Use Search VS Simple Search
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_search-vs-simple-search-v2/).</sup>
 
 The Laserfiche API supports two search APIs, each optimized for different use cases.
 

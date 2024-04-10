@@ -10,7 +10,7 @@ nav_exclude: true
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Export Documents (V1)
+# Export Documents
 **Applies to**: Repository API v1.
 <br/>
 <sup>[See Repository API v2](../guide_exporting-documents-v2/).</sup>
