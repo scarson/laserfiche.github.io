@@ -42,7 +42,7 @@ Create an OAuth Service App when you want to write a service application that ma
      - Once generated, continue to the [OAuth Client Credentials Grant Flow](#oauth-client-credentials-grant-flow) section to generate an HMAC client credential and request an access token.
    - Option 2: Using a long-lasting **Authorization Key** to obtain an API Access Token.
 
-     - Choose this option if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v1/) that require a static secret to connect to Laserfiche APIs.
+     - Choose this option if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v2/) that require a static secret to connect to Laserfiche APIs.
      - Creating an **Authorization Key** requires entering a valid service principal key for the selected service principal
 
        {: .note } **Note:** The Authorization Key will be invalidated when the service principal key expires or is rotated. A new Authorization Key will need to be created using a valid service principal key.
@@ -52,7 +52,7 @@ Create an OAuth Service App when you want to write a service application that ma
    - Option 3: Using a **username** and **password** to directly access the API.
 
      - Choose this option if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API.
-     - Creating an **username** and **password** a valid service principal key for the selected service principal
+     - Creating a **username** and **password** requires a valid service principal key for the selected service principal
 
        {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
 
