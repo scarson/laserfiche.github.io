@@ -43,9 +43,9 @@ Create an OAuth Service App when you want to write a service application that ma
    - Option 2: Using a long-lasting **Authorization Key** to obtain an API Access Token.
 
      - Choose this option if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v1/) that require a static secret to connect to Laserfiche APIs.
-     - Creating an **authorization key** requires entering a valid service principal key for the selected service principal
+     - Creating an **Authorization Key** requires entering a valid service principal key for the selected service principal
 
-       {: .note } **Note:** The authorization key will be invalidated when the service principal key expires or is rotated. A new authorization key will need to be created using a valid service principal key.
+       {: .note } **Note:** The Authorization Key will be invalidated when the service principal key expires or is rotated. A new Authorization Key will need to be created using a valid service principal key.
 
      - Once generated, continue to the [Request an Access Token](#request-an-access-token) section to obtain your token.
 
@@ -69,7 +69,7 @@ Create an OAuth Service App when you want to write a service application that ma
 
 ### Generate an HMAC Client Credential
 
-**Note:** This step can be skipped if a long-lasting **authorization key** was created, the authorization key can be used as the HMAC client credential. Continue to the [request an access token](#request-an-access-token) step.
+**Note:** This step can be skipped if a long-lasting **Authorization Key** was created, the Authorization Key can be used as the HMAC client credential. Continue to the [request an access token](#request-an-access-token) step.
 
 If a public **access key** was created, an HMAC client credential will need to be generated. The HMAC client credential is a JWT and should contain the following claims.
 
