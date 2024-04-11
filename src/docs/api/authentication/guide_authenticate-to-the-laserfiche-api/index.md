@@ -16,7 +16,8 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 Create a connection to Laserfiche services to begin using the Laserfiche API. Subsequent requests can use the access token received in the response from the initial connection creation request.
 
-{: .note } Note: To prevent CSRF attacks, the resulting Access Token should NOT be stored as a cookie. The access token should be stored securely and only accessible by the applicable user.
+{: .note }
+Note: To prevent CSRF attacks, the resulting Access Token should NOT be stored as a cookie. The access token should be stored securely and only accessible by the applicable user.
 
 For Laserfiche Cloud, version 1 and later of the APIs follow the OAuth model.
 
