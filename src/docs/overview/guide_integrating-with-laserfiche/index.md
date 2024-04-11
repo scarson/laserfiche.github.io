@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Integrating With Laserfiche
+title: Integrating with Laserfiche
 nav_order: 1
 parent: Overview
 ---

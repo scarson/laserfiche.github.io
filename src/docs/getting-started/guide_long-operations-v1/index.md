@@ -1,18 +1,20 @@
 ---
 layout: default
 title: Long Operations (V1)
-nav_order: 1
 redirect_from:
   - guides/guide_long-operations.html
   - guide_long-operations.html
-parent: Long Operations
-grand_parent: Getting Started
+nav_exclude: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Long Operations
+
+**Applies to**: Repository API v1.
+<br/>
+<sup>[See Repository API v2](../guide_long-operations/).</sup>
 
 Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API uses a "long operation" pattern where the call will return a token representing the work of the request. Client applications can then use this token to retrieve the status of the operation and the completed result of the action.
 
