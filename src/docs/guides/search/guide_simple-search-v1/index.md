@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Simple Search
 **Applies to**: Repository API v1.
 <br/>
-<sup>[See Repository API v2](../guide_simple-search-v2/).</sup>
+<sup>[See Repository API v2](../guide_simple-search/).</sup>
 
 The simple search API can run a search query in the repository and return the results of the search immediately in the response of the call. [See the following topic to view the differences between simple search and search](../guide_search-vs-simple-search/).
 

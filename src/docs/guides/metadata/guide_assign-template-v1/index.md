@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Assign Templates
 **Applies to**: Repository API v1.
 <br/>
-<sup>[See Repository API v2](../guide_assign-template-v2/).</sup>
+<sup>[See Repository API v2](../guide_assign-template/).</sup>
 
 Fields and templates are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Fields_and_Templates.htm) in Laserfiche that allow you to store and retrieve information about documents and folders. Field and template information is stored with the document. It is available when viewing the document in the document viewer and folder browser, as well as in search.
 

@@ -64,7 +64,7 @@ HTTP 200 OK
 
 Prerequisite: obtain an Access Token. See [Authentication](#authentication).
 
-See the [this guide](../../guides/documents-and-folders/guide_importing-documents-v2) for more details on the Laserfiche import APIs.
+See the [this guide](../../guides/documents-and-folders/guide_importing-documents) for more details on the Laserfiche import APIs.
 
 1. In Microsoft Power Automate, create a OneDrive **Get file metadata** action and select a document to import into Laserfiche.
 1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.

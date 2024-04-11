@@ -14,10 +14,10 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Search
 **Applies to**: Repository API v2.
 <br/>
-<sup>[See Repository API v1](../guide_search/).</sup>
+<sup>[See Repository API v1](../guide_search-v1/).</sup>
 
 Use the search API to find entries in your Laserfiche Cloud repository.
-A search operation follows the [long operation](../../../getting-started/guide_long-operations-v2/) pattern:
+A search operation follows the [long operation](../../../getting-started/guide_long-operations/) pattern:
 
 1. The client application launches a search query by calling the search API.
 1. The API call will immediately return a task ID while the search continues running in Laserfiche Cloud.
@@ -122,7 +122,7 @@ HTTP 200 Ok
 ```
 
 {: .note }
-**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing-v2#retrieve-field-metadata-for-each-document).
+**Note:** See the Laserfiche guide on how to use the `fields` query parameter to [get field metadata with the search results](../../documents-and-folders/guide_get-folder-listing#retrieve-field-metadata-for-each-document).
 
 To get the text context hits for a document in the search results, we can call `GET https://api.laserfiche.com/repository/v2/Repositories/{repositoryId}/Searches/{taskId}/Results/{rowNumber}/ContextHits` with the appropriate row number of the search result.
 

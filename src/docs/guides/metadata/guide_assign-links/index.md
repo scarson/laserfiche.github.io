@@ -14,7 +14,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Assign Links
 **Applies to**: Repository API v2.
 <br/>
-<sup>[See Repository API v1](../guide_assign-links/).</sup>
+<sup>[See Repository API v1](../guide_assign-links-v1/).</sup>
 
 [Links](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
 

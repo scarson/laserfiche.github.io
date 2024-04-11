@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # When to Use Search VS Simple Search
 **Applies to**: Repository API v1.
 <br/>
-<sup>[See Repository API v2](../guide_search-vs-simple-search-v2/).</sup>
+<sup>[See Repository API v2](../guide_search-vs-simple-search/).</sup>
 
 The Laserfiche API supports two search APIs, each optimized for different use cases.
 

@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Create Folders in the Repository
 **Applies to**: Repository API v1.
 <br/>
-<sup>[See Repository API v2](../guide_creating-folders-v2/).</sup>
+<sup>[See Repository API v2](../guide_creating-folders/).</sup>
 
 Folders are the basis for organizing all of the content in your repository. You can create folders with the Laserfiche API by using the following POST API.
 

@@ -15,7 +15,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Search
 **Applies to**: Repository API v1.
 <br/>
-<sup>[See Repository API v2](../guide_search-v2/).</sup>
+<sup>[See Repository API v2](../guide_search/).</sup>
 
 Use the search API to find entries in your Laserfiche Cloud repository.
 

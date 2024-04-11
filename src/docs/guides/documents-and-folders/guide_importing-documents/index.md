@@ -15,12 +15,12 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Import Documents
 **Applies to**: Repository API v2.
 <br/>
-<sup>[See Repository API v1](../guide_importing-documents/).</sup>
+<sup>[See Repository API v1](../guide_importing-documents-v1/).</sup>
 
 Laserfiche API V2 provides two types of APIs for importing a document:
 
 - **Simple Import:** this is intended to be used for importing _small_ documents in a _synchronous_ style. The current maximum file size limit for this API is 100 MB.
-- **Chunked Import:** this is intended to be used for importing _large_ documents in an _asynchronous_ style, i.e. using the [long operation](../../../getting-started/guide_long-operations-v2/) pattern. The current maximum file size limit for this API is 64 GB.
+- **Chunked Import:** this is intended to be used for importing _large_ documents in an _asynchronous_ style, i.e. using the [long operation](../../../getting-started/guide_long-operations/) pattern. The current maximum file size limit for this API is 64 GB.
 
 ## Simple Import
 
