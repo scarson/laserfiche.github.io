@@ -1,41 +1,50 @@
 ---
 layout: default
-title: Assign Links (V1)
-nav_exclude: true
+title: Assign Links
+nav_order: 4
 redirect_from:
-  - guides/guide_assign-links.html
-  - guide_assign-links.html
+  - /guides/v2/guide_assign-links-v2.html
+parent: Repository Metadata
+grand_parent: Guides
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Assign Links
-**Applies to**: Repository API v1.
+**Applies to**: Repository API v2.
 <br/>
-<sup>[See Repository API v2](../guide_assign-links-v2/).</sup>
+<sup>[See Repository API v1](../guide_assign-links/).</sup>
 
-Links are a [metadata type](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) in Laserfiche that allows you to connect two related documents or folders, such as an email and a document.
+[Links](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Links.htm) are a type of metadata in Laserfiche that allows you to connect two related documents or folders.
 
-For example, you might connect documents of different types that are related in some way, such as an agenda and its packet or an email message and its document. You might also use document relationships to indicate document status, such as a document that has been superseded and the document that superseded it.
+For example, you might connect documents of different types that are related in some way, such as an agenda and its packet or an email message and its attached document. You might also use document relationships to indicate document status, such as a document that has been superseded and the document that superseded it.
 
 **Request Overview**
 
-{: .note }
-PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryID*/links
+{: .note}
+PUT https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Links
 
 The following sample request links an email message to another document that is the email attachment.
 
-The entry ID in the request URI will be the email. The request body contains a list of links that will be created to the source entry. The example request body contains one link to the document with entry ID 15 that we want to specify as the attachment. The Message and Attachment document relationship types are created by default in a repository and is represented with the linktypeID of 1.
+The entry ID in the request URI will be the email. The request body contains a list of links that will be created and assigned to the source entry. The example request body contains one link to the document with entry ID 15 that we want to specify as the attachment. The Message and Attachment document relationship types are created by default in a repository and is represented with the `linkDefinitionId` of 1. The property `isSource` determines the direction of the link, i.e. whether the `{entryId}` in the request URI refers to the source or the destination of the link. In addition, it is possible to use the `customProperties` property in the request body, to define a set of key-value pairs as custom properties to be attached to the link.
 
 ```xml
-PUT https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/10/links
-[
-  {
-    "targetId": 15,
-    "linkTypeId": 1,
-  }
-]
+PUT https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/10/Links
+{
+  "links": [
+    {
+      "linkDefinitionId": 1,
+      "otherEntryId": 15,
+      "isSource": true,
+      "customProperties": {
+        "custom_property_1": "value of custom property 1",
+        "custom_property_2": "value of custom property 2",
+        "custom_property_3": "value of custom property 3",
+      }
+    }
+  ]
+}
 ```
 
 Note that this call will overwrite any existing links on the source entry. If you want to add new links to an entry and keep the existing links, you will need to provide both the existing links and the new links in the request body. If you want to remove all links on an entry, you can provide an empty list.
@@ -45,20 +54,25 @@ The response will contain the list of all links assigned to the source entry. Ea
 ```xml
 HTTP 200 OK
 {
+  "@odata.context": "https://api.laserfiche.com/repository/v2/$metadata#Collection(Laserfiche.Repository.Link)",
   "value": [
     {
-      "linkId": 5,
+      "id": 5,
       "sourceId": 10,
       "sourceFullPath":"\\Email",
       "sourceLabel": "Email",
       "targetId": 15,
       "targetFullPath": "\\EmailAttachment",
       "targetLabel": "Attachment",
-      "description": "",
-      "linkTypeDescription": "",
-      "sourceLink": "https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/10",
-      "targetLink": "https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/15",
-      "linkProperties": null
+      "linkDefinitionId": 1,
+      "linkDefinitionDescription": "Email Attachment",
+      "sourceLink": "https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/10",
+      "targetLink": "https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/15",
+      "customProperties": {
+        "custom_property_1": "value of custom property 1",
+        "custom_property_2": "value of custom property 2",
+        "custom_property_3": "value of custom property 3",
+      }
     }
   ]
 }
