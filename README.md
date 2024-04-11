@@ -17,12 +17,12 @@ Laserfiche developer portal: https://developer.laserfiche.com
 
 - Troubleshoot:
 
-  - Certificate issues:
-
-    1. Export the certificate (Base64) you need and save it as a .pem file.
-    1. Copy the .pem file to the RubyGems certificate directory in your installation. E.g., `C:\Ruby32-x64\lib\ruby\3.2.0\rubygems\ssl_certs\rubygems.org`
+  - If `gem install jekyll bundle` fails due to missing certificate e.g. `ERROR:  SSL verification error at depth 2: unable to get local issuer certificate (20)
+ERROR:  You must add /C=US/ST=California/L=San Jose/O=Zscaler Inc./OU=Zscaler Inc./CN=Zscaler Root CA/emailAddress=support@zscaler.com to your local trusted store` follow these steps:
+    1. Get the missing certificate e.g. `zscaler.crt` or `zscaler.pem`
+    1 Add the certificate to Ruby cert store file e.g. `C:/Ruby32-x64/bin/etc/ssl/cert.pem`. Actual location can be discovered using `ruby -ropenssl -e 'p OpenSSL::X509::DEFAULT_CERT_FILE'` 
+    1. You may also need to add the certificate to rubygems `ssl_certs` folder e.g. `C:\Ruby32-x64\lib\ruby\3.2.0\rubygems\ssl_certs\rubygems.org`
     1. Run `gem update --system`
-    1. If you still see the certificate issue, copy the .pem file also to the site_ruby certificate directory, e.g., `C:\Ruby32-x64\lib\ruby\site_ruby\3.2.0\rubygems\ssl_certs\rubygems.org`. Then run `gem update --system` again.
 
     - More details [here](https://bundler.io/guides/rubygems_tls_ssl_troubleshooting_guide.html#updating-ca-certificates).
 
