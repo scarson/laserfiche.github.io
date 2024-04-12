@@ -45,7 +45,8 @@ Create an OAuth Service App when you want to write a service application that ma
      - Choose this option if the service app does not have the capabilities of generating an HMAC client credential. This option is intended for [low-code tools](../../../getting-started/guide_low-code-tools-v2/) that require a static secret to connect to Laserfiche APIs.
      - Creating an **Authorization Key** requires entering a valid service principal key for the selected service principal
 
-       {: .note } **Note:** The Authorization Key will be invalidated when the service principal key expires or is rotated. A new Authorization Key will need to be created using a valid service principal key.
+       {: .note }
+       **Note:** The Authorization Key will be invalidated when the service principal key expires or is rotated. A new Authorization Key will need to be created using a valid service principal key.
 
      - Once generated, continue to the [Request an Access Token](#request-an-access-token) section to obtain your token.
 
@@ -54,7 +55,8 @@ Create an OAuth Service App when you want to write a service application that ma
      - Choose this option if the service app does not have the ability to use the OAuth credentials flow. You can use the generated credentials directly with the Laserfiche API.
      - Creating a **username** and **password** requires a valid service principal key for the selected service principal
 
-       {: .note } **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
+       {: .note }
+       **Note:** The credentials will be invalidated when the service principal key expires or is rotated. New credentials will need to be created using a valid service principal key.
 
      - To create a **username** and **password** you must specify requested scopes. This is required since you do not have the additional step of specifying scopes when requesting an access token using this option. These should fall within the allowed scopes of your application, the scopes your application will have access to will be the intersection of the allowed and requested scopes.
      - Once generated, you can skip the next step for the OAuth credentials flow and go directly to the [Use the credentials to access Laserfiche APIs](#use-the-credentials-to-access-laserfiche-apis) section.
