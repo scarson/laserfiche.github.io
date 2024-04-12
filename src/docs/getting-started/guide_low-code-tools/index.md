@@ -5,16 +5,15 @@ nav_order: 4
 redirect_from:
   - /guides/v2/guide_low-code-tools-v2.html
 parent: Getting Started
-has_children: true
 ---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-# Using the Laserfiche API with Low-Code Tools (V2)
-
-{: .note }
-To see the guide for V1, click [here](../guide_low-code-tools-v1/).
+# Using the Laserfiche API with Low-Code Tools
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_low-code-tools-v1/).</sup>
 
 Use the Laserfiche API to access Laserfiche from low-code tools. This guide will demonstrate how to import a document into Laserfiche with Microsoft Power Automate. Other low-code tools may follow a similar model.
 
@@ -65,7 +64,7 @@ HTTP 200 OK
 
 Prerequisite: obtain an Access Token. See [Authentication](#authentication).
 
-See the [this guide](../../guides/documents-and-folders/guide_importing-documents-v2) for more details on the Laserfiche import APIs.
+See the [this guide](../../guides/documents-and-folders/guide_importing-documents) for more details on the Laserfiche import APIs.
 
 1. In Microsoft Power Automate, create a OneDrive **Get file metadata** action and select a document to import into Laserfiche.
 1. Link a OneDrive **Get file content using path** action and set the file path to the **Path** from the **Get file metadata** action.

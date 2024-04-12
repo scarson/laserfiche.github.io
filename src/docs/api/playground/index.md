@@ -13,7 +13,8 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Laserfiche REST Swagger Playground
 
-The Laserfiche REST API provides programmatic access to Laserfiche services for Cloud and [Self-Hosted/api/server/index.html Laserfiche instances.
+
+The Laserfiche REST API provides programmatic access to Laserfiche services for Cloud and [Self-Hosted Laserfiche instances](../server/).
 
 ### Laserfiche API Client Core
 

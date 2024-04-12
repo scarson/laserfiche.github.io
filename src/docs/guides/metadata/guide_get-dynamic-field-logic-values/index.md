@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Get Dynamic Field Values (V1)
-nav_order: 10
+title: Get Dynamic Field Values
+nav_order: 5
 redirect_from:
-  - guides/guide_get-dynamic-field-logic-values.html
-  - guide_get-dynamic-field-logic-values.html
+  - /guides/v2/guide_get-dynamic-field-logic-values-v2.html
 parent: Repository Metadata
 grand_parent: Guides
 ---
@@ -13,18 +12,21 @@ grand_parent: Guides
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
 # Get Dynamic Field Logic Values
+**Applies to**: Repository API v2.
+<br/>
+<sup>[See Repository API v1](../guide_get-dynamic-field-logic-values-v1/).</sup>
 
-Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Dynamic-Fields.htm) in Laserfiche in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a parent field determines what value are available in the "child" fields. Dynamic fields can contain multiple levels (for instance, only displaying the available model numbers for a particular model once the Model field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of manufacturer and model).
+Dynamic field values are [metadata types](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Dynamic-Fields.htm) in Laserfiche in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a _parent_ field determines what value are available in the _child_ fields. Dynamic fields can contain multiple levels (for instance, only displaying the available model numbers for a particular model once the Model field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of manufacturer and model).
 
 **Request Overview**
 
 {: .note }
-POST https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/fields/GetDynamicFieldLogicValue
+POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Fields/GetDynamicFieldLogicValue
 
 The example retrieves the child field values that correlate to the given parent field value **California** of field **US States** on template ID **1234**.
 
 ```xml
-POST https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/12345/fields/GetDynamicFieldLogicValue
+POST https://api.laserfiche.com/repository/v2/Repositories/r-abc123/Entries/12345/Fields/GetDynamicFieldLogicValue
 {
   "templateId": 123,
   "fieldValues" : {
