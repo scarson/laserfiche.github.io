@@ -21,8 +21,9 @@ For example, you might connect documents of different types that are related in 
 
 **Request Overview**
 
-{: .note }
+```xml
 PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryID*/links
+```
 
 The following sample request links an email message to another document that is the email attachment.
 

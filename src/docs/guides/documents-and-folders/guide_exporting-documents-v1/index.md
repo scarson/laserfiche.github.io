@@ -21,8 +21,9 @@ Retrieving a document from the repository is a multi-step process that can be ac
 
 Before the export can begin, the client will need information about the file content and size. That information can be acquired through this HEAD request.
 
-{: .note }
+```xml
 HEAD https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/Laserfiche.Repository.Document/edoc
+```
 
 - The `entryId` in the request URL represents the ID of the document to be exported
 - There is no request body in this HEAD call.
@@ -42,8 +43,9 @@ Content-Type: application/pdf
 
 Now that we have the length and type of the document, we can download the document with the following GET request. Note that this route is identical to the last request, except for the HTTP method.
 
-{: .note }
+```xml
 GET https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/Laserfiche.Repository.Document/edoc
+```
 
 If the request is successful, it will return a 200 OK HTTP response status code. The request body will contain the contents of the document as a byte array using the appropriate MIME type.
 
@@ -68,8 +70,9 @@ If the response is successful, it will return a 206 Partial Content HTTP respons
 
 One alternative to using the GET request above, is to send a POST request that is identical in response body, but instead allows for you to additionally specify an audit reason. Audit reasons can be retrieved through this GET request.
 
-{: .note }
+```xml
 GET https://api.laserfiche.com/repository/v1/Repositories/*repoId*/AuditReasons
+```
 
 For this scenario, we'll export the document using the audit reason with ID 71, name "Public request". Once you’ve parsed the response of the AuditReasons request, you can send the audit reason ID and optionally add a comment as part of this request.
 

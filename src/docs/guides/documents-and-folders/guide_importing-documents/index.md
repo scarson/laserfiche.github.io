@@ -28,8 +28,10 @@ Create a document with the Laserfiche API by using the following multipart/form 
 
 **Request Overview**
 
-{: .note}
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{parentEntryId}*/Folder/Import
+```
+
 As an example, the following multipart/form request will:
 
 - Create a document named "LFAPI created document" in the folder with ID _{parentEntryId}_.
@@ -124,8 +126,9 @@ Assuming that we intend to import the large file in 10 chunks, it is needed to r
 
 **Request Overview**
 
-{:.note}
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/CreateMultipartUploadUrls
+```
 
 ```json
 {
@@ -152,8 +155,9 @@ HTTP 200 OK
 
 To request the second batch of upload URLs, we make the following call, setting the value of _uploadId_ to the one received in the response of the first call.
 
-{: .note }
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/CreateMultipartUploadUrls
+```
 
 ```json
 {
@@ -313,8 +317,9 @@ Having written the file parts into the upload URLs, we can import the uploaded p
 
 **Request Overview**
 
-{:.note}
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{parentEntryId}*/Folder/ImportUploadedParts
+```
 
 The following multipart/form request will:
 

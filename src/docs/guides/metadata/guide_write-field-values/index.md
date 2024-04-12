@@ -22,8 +22,9 @@ A field contains a piece of information about a document, such as an author name
 
 **Request Overview**
 
-{: .note }
+```xml
 PUT https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Fields
+```
 
 The example updates the **Date**, **Sender**, **Recipients**, and **Subject** fields on entry ID **12345**.
 

@@ -21,8 +21,9 @@ A field contains a piece of information about a document, such as an author name
 
 **Request Overview**
 
-{: .note }
+```xml
 PUT https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*entryId*/template
+```
 
 The example request assigns the **Email** template to the entry with entry ID **12345**. It also assigns values to the **Sender**, **Recipients**, and **Subject** fields in the template. In this example, **Recipients** is a multi-value field and we can assign more than one value.
 
