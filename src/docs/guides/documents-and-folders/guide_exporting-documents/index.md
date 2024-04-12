@@ -27,8 +27,9 @@ Laserfiche API V2 provides two types of APIs for retrieving a document from the 
 Retrieve a document from the repository in a synchronous style, using the following POST request.
 **Request Overview**
 
-{: .note }
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/Export?pageRange=*{pageRange}*
+```
 
 - The **pageRange** parameter is a comma-separated range of pages to include. Ex: 1,3,4 or 1-3,5-7,9. This value is ignored when exporting the document as **Edoc**. If no value is given, the API will export all pages.
 - A Laserfiche administrator may configure the document repository to have audit reasons that can be selected when performing various actions. These audit reasons include "Export" audit reasons, which give specific reasons on why a document may need to be exported. You can include an auditReasonId and optionally a comment in the request body. The available audit reasons for a repository can be retrieved through this GET request:
@@ -71,8 +72,9 @@ HTTP 200 OK
 Retrieve a document from the repository in an asynchronous style, using te following POST request.
 **Request Overview**
 
-{: .note }
+```xml
 POST https://api.laserfiche.com/repository/v2/Repositories/*{repositoryId}*/Entries/*{entryId}*/ExportAsync?pageRange=*{pageRange}*
+```
 
 The query parameters and the request body structure is the same as the **Simple Export** API.
 If export is started successfully, the API will return a 202 HTTP response status code with a _task ID_.

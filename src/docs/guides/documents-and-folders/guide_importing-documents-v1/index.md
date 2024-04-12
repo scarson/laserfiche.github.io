@@ -19,8 +19,9 @@ Documents, folders, and shortcuts are collectively referred to as entries in Las
 
 **Request Overview**
 
-{: .note }
+```xml
 POST https://api.laserfiche.com/repository/v1/Repositories/*repoId*/Entries/*parentfolderid*/*documentName*
+```
 
 The following multipart/form request creates a document named "LFAPI created document" in the folder with ID 1234 and assigns two field values and a tag to the document. Additionally, we will provide a file that corresponds to the .pdf file we want to associate with the entry. Place the file into the web requests "electronicDocument" portion of the form, and place the metadata setting portion of the request into the "request" part of the form.`
 

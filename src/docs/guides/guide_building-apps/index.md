@@ -20,19 +20,20 @@ Take advantage of pre-built libraries to accelerate your Laserfiche app developm
 A library containing utility functions and a reusable localization service.
 
 - [JavaScript/TypeScript library on npm](https://www.npmjs.com/package/@laserfiche/lf-js-utils)
-- [Library Reference Documentation](https://laserfiche.github.io/lf-js-utils)
+- **Documentation**: [lf-js-utils](https://laserfiche.github.io/lf-js-utils)
 
 ## lf-resource-library
 
 A library containing localized strings resource files, fonts, and icons, that can be used to build Laserfiche apps.
 
 - [JavaScript/TypeScript library on npm](https://www.npmjs.com/package/@laserfiche/lf-resource-library)
-- [Library Reference Documentation](https://github.com/Laserfiche/lf-resource-library)
+- **Source Code**: [lf-resource-library](https://github.com/Laserfiche/lf-resource-library)
 
 ## lf-ui-components
 
 A collection of UI Web Components to be used to interact with Laserfiche.
 
-- [JavaScript/TypeScript library on npm](https://www.npmjs.com/package/@laserfiche/lf-ui-components)
-  - [Version 16 Library Reference Documentation](https://laserfiche.github.io/lf-ui-components)
+- [lf-ui-components library on npm](https://www.npmjs.com/package/@laserfiche/lf-ui-components)
 - [types-lf-ui-components library on npm](https://www.npmjs.com/package/@laserfiche/types-lf-ui-components)
+- **Documentation**: 
+  - [lf-ui-components version 16](https://laserfiche.github.io/lf-ui-components)
