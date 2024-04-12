@@ -63,7 +63,8 @@ Create an OAuth Service App when you want to write a service application that ma
 
 1. When generating an access key, please **copy** or **download** the key as it will only be shown once. Each service app can have a maximum of 2 access keys.
 
-   {: .note } **Note:** Access keys should be securely stored.
+   {: .note }
+   **Note:** Access keys should be securely stored.
 
 ## OAuth Client Credentials Grant Flow
 
@@ -119,7 +120,8 @@ The JWT will also need to be signed by the **access key**. See the links below f
           }
         ```
 
-    {: .note } For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
+    {: .note }
+    For service applications, no refresh token will be returned. When the access token expires, the service application will need to start the client credentials flow again to get a new access token.
 
     - On failure, the OAuth service will return an error response.
 
