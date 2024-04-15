@@ -47,7 +47,7 @@ For Self-Hosted Laserfiche systems, learn how to [use the Swagger UI Sandbox](..
 - For the Canadian Data Center: https://api.laserfiche.ca/repository/swagger/oauth2-redirect.html
 - For the European Data Center: https://api.eu.laserfiche.com/repository/swagger/oauth2-redirect.html
 
-1. **(Preview) Table API**
+1. **Table API**
 
 - For the United States Data Center: https://api.laserfiche.com/odata4/swagger/oauth2-redirect.html
 - For the Canadian Data Center: https://api.laserfiche.ca/odata4/swagger/oauth2-redirect.html

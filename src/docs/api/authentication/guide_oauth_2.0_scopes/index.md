@@ -75,7 +75,7 @@ Examples of Repository API granular scopes
 | repository/Repositories/r-abc123/Entries/1.Read | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/fields                                | Get fields assigned to entry 1  |
 |                                                 | GET https://api.laserfiche.com/repository/v1/Repositories/r-abc123/Entries/1/Laserfiche.Repository.Folder/children | Get children entries in entry 1 |
 
-### (Preview) Table API
+### Table API
 
 | Scopes      | Description                                                                                       |
 | ----------- | ------------------------------------------------------------------------------------------------- |

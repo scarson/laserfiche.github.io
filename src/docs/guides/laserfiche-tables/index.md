@@ -1,11 +1,18 @@
-<!-- ---
+---
 layout: default
-nav_order: 3
-title: Tables
+title: Working with Lookup Tables
+nav_order: 1
+has_children: false
 parent: Guides
---- -->
+---
 
 <!--© 2024 Laserfiche.
 See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license information.-->
 
-## TODO
+# Working with Lookup Tables
+
+The Lookup Table OData API allows users to interact with their data stored in Lookup Tables. The Lookup Table API follows the OData version 4 standard. This allows you to use the OData standard to access and perform CRUD on your Lookup Tables in Laserfiche from any application. Major use cases include reporting in Power BI or Excel. For more information on how to use an OData API [see the OData documentation](https://www.odata.org/getting-started/basic-tutorial/).
+
+## Authenticate and use the API
+
+Follow the instructions in the [authentication](./../../api/authentication/guide_authenticate-to-the-laserfiche-api) guides to authenticate and start using the API. The Table API supports both **Bearer** authentication with an OAuth Access Token and **Basic** authentication with a username and password generated from the Developer Console.
