@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Working with Lookup Tables
-nav_order: 1
+nav_order: 7
 has_children: false
 parent: Guides
 ---
@@ -11,7 +11,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Working with Lookup Tables
 
-The Lookup Table OData API allows users to interact with their data stored in Lookup Tables. The Lookup Table API follows the OData version 4 standard. This allows you to use the OData standard to access and perform CRUD on your Lookup Tables in Laserfiche from any application. Major use cases include reporting in Power BI or Excel. For more information on how to use an OData API [see the OData documentation](https://www.odata.org/getting-started/basic-tutorial/).
+The Lookup Table OData API allows users to interact with their data stored in Lookup Tables. If follows the OData version 4 standard which allows you to use the OData standard to access and perform CRUD on your Laserfiche Lookup Tables from any application. Major use cases include reporting in Power BI or Excel. For more information on how to use an OData API [see the OData documentation](https://www.odata.org/getting-started/basic-tutorial/).
 
 ## Authenticate and use the API
 
