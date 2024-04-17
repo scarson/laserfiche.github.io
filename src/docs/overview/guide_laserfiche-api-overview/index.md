@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 
 # Laserfiche REST API
 
-Laserfiche provides integrators with a REST API for Cloud and [Self-Hosted](../../api/server/) Laserfiche installations. Get started learning about the capabilities of our API by browsing the sections below. Find out more about our API Server for self-hosted installations [here](../../api/server/).
+Laserfiche provides integrators with a REST API for Cloud and [Self-Hosted](../../api/server/) Laserfiche installations. Learn about the capabilities of our API by browsing the sections below. Find out more about our API Server for self-hosted installations [here](../../api/server/).
 
 ### [Overview](../guide_overview-of-the-laserfiche-api/)
 
