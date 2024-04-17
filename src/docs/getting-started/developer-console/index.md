@@ -13,7 +13,7 @@ See LICENSE-DOCUMENTATION and LICENSE-CODE in the project root for license infor
 # Laserfiche Developer Console
 
 {: .note }
-**Note:** The following guide only applies to Laserfiche Cloud.
+**Note:** The following guide only applies to Laserfiche Self-Hosted.
 
 The Developer Console can be used to manage the OAuth applications in your Laserfiche account.
 
