@@ -32,7 +32,7 @@ Use the Laserfiche Repository API to access data in a Laserfiche repository. Imp
 - [Try the Repository API](https://api.laserfiche.ca/repository/swagger/index.html) (Canadian Data Center)
 - [Try the Repository API](https://api.eu.laserfiche.com/repository/swagger/index.html) (European Data Center)
 
-### (Preview) Laserfiche Table API
+### Laserfiche Table API
 
 Use the Laserfiche Table API to access and manage data in a Laserfiche Lookup Table.
 
